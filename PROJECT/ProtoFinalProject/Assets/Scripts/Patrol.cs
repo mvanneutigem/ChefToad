@@ -8,6 +8,7 @@ public class Patrol : MonoBehaviour
     public Transform TransSelf;
     public Transform[] WayPoints;
     public float Speed = 3.0f;
+    public float TurnSpeed = 1.0f;
     private int _currentWaypoint;
 
     void Update()
@@ -16,6 +17,8 @@ public class Patrol : MonoBehaviour
         {
             GoToNextWaypoint();
         }
+        Vector3 lerpValue = Vector3.Lerp(TransSelf.position + TransSelf.forward, WayPoints[_currentWaypoint].transform.position, Time.deltaTime * TurnSpeed);
+        TransSelf.LookAt(lerpValue);
         TransSelf.position = Vector3.MoveTowards(TransSelf.position, WayPoints[_currentWaypoint].transform.position, Speed * Time.deltaTime);
     }
 
