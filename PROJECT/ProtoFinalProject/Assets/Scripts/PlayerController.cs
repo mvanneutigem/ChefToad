@@ -9,12 +9,12 @@ public class PlayerController : MonoBehaviour
     public float Speed { get { return _speed; } set { _speed = value; } }//value is created as magic variable entered by outside
 
     //FIELDS
-    private Vector3 _moveVector;
+    private Vector3 _moveVector = Vector3.zero;
     private CharacterController _characterController;
     public GameObject mainCamera;
     [SerializeField]
     private float _speed = 5.0f;
-    private float _rotateSpeed = 5.0f;
+    private float _rotateSpeed = 0.03f;
 
     //METHODS
     void Awake()
@@ -23,41 +23,34 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
-        //input
-        float hInput = Input.GetAxis("Horizontal");
-        float vInput = Input.GetAxis("Vertical");
-
         if (_characterController.isGrounded)
         {
-            //rotate
-            //transform.right = Vector3.Slerp(transform.right, Vector3.left * hInput, 0.1f);
-            //if (hInput > 0)
-            //    transform.localRotation = Quaternion.Euler(new Vector3(0, 90, 0));
-            //else if (hInput < 0)
-            //    transform.localRotation = Quaternion.Euler(new Vector3(0, 270, 0));
+            //input
+            float hInput = Input.GetAxisRaw("Horizontal");
+            float vInput = Input.GetAxisRaw("Vertical");
 
-            transform.Rotate(0, Input.GetAxis("Horizontal") * _rotateSpeed * Time.deltaTime, 0);
+            //scale camera forward to only have x and z axis to prevent character from angle-ing upwards/downwards
+            var camforward = Vector3.Scale(mainCamera.transform.forward, new Vector3(1, 0, 1)).normalized;
 
-            _moveVector = new Vector3(0, 0, vInput * Speed);
-            //camera align
-            _moveVector = mainCamera.transform.rotation * transform.localRotation * _moveVector;
-        }
+            //set the movevector, relative to the camera position
+            _moveVector = (vInput * camforward + hInput * mainCamera.transform.right);
 
-        if (Input.GetAxis("Jump") > 0)
-        {
-            if (_characterController.isGrounded)
+            //set the speed
+            _moveVector = Speed * _moveVector.normalized;
+
+            //rotate character in the direction it's moving in
+            if (_moveVector != Vector3.zero)
             {
-                _moveVector += Vector3.up * _speed;
+                //viewvector =
+                Quaternion targetRotation = Quaternion.LookRotation(_moveVector);
+                transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.time * _rotateSpeed);
             }
-            _moveVector.x = hInput * Speed / 2;
-            _moveVector.z = vInput * Speed / 2;
         }
-
         //Gravity
         _moveVector += Physics.gravity * Time.deltaTime;
 
-        //Move
+        //pass movement to char controller
         _characterController.Move(_moveVector * Time.deltaTime);
-       
+
     }
 }
