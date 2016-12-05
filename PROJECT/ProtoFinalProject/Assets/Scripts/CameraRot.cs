@@ -7,7 +7,7 @@ public class CameraRot : MonoBehaviour {
     public Transform Target;
     private float _rotSpeed = 1.0f;
     private Vector3 _offset;
-    public float distance = 10;
+    public float distance = 20;
     //METHODS
     // Use this for initialization
     void Start ()
