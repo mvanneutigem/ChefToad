@@ -20,7 +20,7 @@ public class CameraRot : MonoBehaviour {
 	void Update ()
     {
         //change offset relative to mouse movement
-        _offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * _rotSpeed, Vector3.up) * Quaternion.AngleAxis(-Input.GetAxis("Mouse Y") * _rotSpeed, Vector3.forward) * _offset;
+        _offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * _rotSpeed, Vector3.up) * Quaternion.AngleAxis(Input.GetAxis("Mouse Y") * _rotSpeed, Vector3.forward) * _offset;
         //set camera position
         transform.position = Target.position + _offset;
         //look at target
