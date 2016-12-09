@@ -722,6 +722,7 @@ MonoBehaviour:
   - {fileID: 498633168}
   Speed: 3
   TurnSpeed: 1
+  _isMoving: 1
 --- !u!23 &13044238
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13250,7 +13251,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 19.361, y: -177.54001, z: -0.446}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!114 &498088691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13262,7 +13263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899b9ff1424d4ca45be5bca29a15a069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 1375733089}
+  Target: {fileID: 951513460}
   distance: 10
 --- !u!1 &498633167
 GameObject:
@@ -28050,6 +28051,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 951146014}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &951513460 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000011496664210, guid: 439219fc14f936749a10a14349accc51,
+    type: 2}
+  m_PrefabInternal: {fileID: 975258769}
 --- !u!1 &953980385
 GameObject:
   m_ObjectHideFlags: 0
@@ -28735,6 +28741,19 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4000011496664210, guid: 439219fc14f936749a10a14349accc51, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011496664210, guid: 439219fc14f936749a10a14349accc51, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -8.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010350722304, guid: 439219fc14f936749a10a14349accc51,
+        type: 2}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 498088685}
     m_RemovedComponents:
     - {fileID: 114000012928173540, guid: 439219fc14f936749a10a14349accc51, type: 2}
     - {fileID: 114000012838236292, guid: 439219fc14f936749a10a14349accc51, type: 2}
@@ -29566,6 +29585,7 @@ MonoBehaviour:
   - {fileID: 248563089}
   Speed: 3
   TurnSpeed: 1
+  _isMoving: 1
 --- !u!23 &1005257042
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -40110,46 +40130,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1371595081}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1375733088 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000014098925518, guid: 439219fc14f936749a10a14349accc51,
-    type: 2}
-  m_PrefabInternal: {fileID: 975258769}
---- !u!4 &1375733089 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4000014103333694, guid: 439219fc14f936749a10a14349accc51,
-    type: 2}
-  m_PrefabInternal: {fileID: 975258769}
---- !u!114 &1375733090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1375733088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bf8bb3c57529de40b265b96d641a74a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCamera: {fileID: 498088685}
-  _speed: 5
---- !u!143 &1375733091
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1375733088}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 1.5
-  m_Radius: 0.375
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1377112380
 GameObject:
   m_ObjectHideFlags: 0
@@ -55294,6 +55274,7 @@ MonoBehaviour:
   - {fileID: 657242572}
   Speed: 3
   TurnSpeed: 1
+  _isMoving: 1
 --- !u!23 &1863213205
 MeshRenderer:
   m_ObjectHideFlags: 0
