@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private float _speed = 5.0f;
     private float _rotateSpeed = 0.03f;
     private bool _onLadder = false;
+    private float _climbspeed = 5.0f;
 
     //METHODS
     void Awake()
@@ -24,26 +25,17 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
+        //input
+        float hInput = Input.GetAxisRaw("Horizontal");
+        float vInput = Input.GetAxisRaw("Vertical");
         if (_characterController.isGrounded)
         {
-            //input
-            float hInput = Input.GetAxisRaw("Horizontal");
-            float vInput = Input.GetAxisRaw("Vertical");
 
             //scale camera forward to only have x and z axis to prevent character from angle-ing upwards/downwards
             var camforward = Vector3.Scale(mainCamera.transform.forward, new Vector3(1, 0, 1)).normalized;
             
-            //ladder
-            if (_onLadder)
-            {
-                _moveVector = (vInput * Vector3.up + hInput * mainCamera.transform.right);
-            }
-            else
-            {
-                //set the movevector, relative to the camera direction
-                _moveVector = (vInput * camforward + hInput * mainCamera.transform.right);
-
-            }
+            //set the movevector, relative to the camera direction
+            _moveVector = (vInput * camforward + hInput * mainCamera.transform.right);
 
             //set the speed
             _moveVector = Speed * _moveVector.normalized;
@@ -60,24 +52,44 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        //ladder
+        if (_onLadder )
+        {
+            Debug.Log("ladder movement active");
+            Debug.Log(vInput);
+            if (_characterController.isGrounded && vInput > 0 || !_characterController.isGrounded)
+            {
+                _moveVector = Vector3.up * vInput * _climbspeed;
+            }
+        }
+
         //Gravity
         _moveVector += Physics.gravity * Time.deltaTime;
-
         //pass movement to char controller
         _characterController.Move(_moveVector * Time.deltaTime);
 
-        //ladder
         _onLadder = false;
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
         Debug.Log("triggered");
         //ladder
         if (other.tag == "Ladder")
         {
+            Debug.Log("enterladder");
             _onLadder = true;
-            Debug.Log("ladder");
+            Physics.gravity = Vector3.zero;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        Debug.Log("untriggered");
+        //ladder
+        if (other.tag == "Ladder")
+        {
+            Physics.gravity = new Vector3(0, -9.81f, 0);
         }
     }
 }
