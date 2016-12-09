@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: cc5438421a6b90842a8045b03bb16474
-timeCreated: 1481273482
+guid: 47a3df61ae6f05a4fb4d7c7845409c4a
+timeCreated: 1481281494
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,8 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Ladder_mid
-    6400000: //RootNode
+    4300000: BuildingBlock_3sideChamfer
   materials:
     importMaterials: 1
     materialName: 0
@@ -37,7 +36,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
