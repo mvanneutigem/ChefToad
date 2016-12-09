@@ -9,17 +9,21 @@ public class Patrol : MonoBehaviour
     public Transform[] WayPoints;
     public float Speed = 3.0f;
     public float TurnSpeed = 1.0f;
+    public bool _isMoving = true;
     private int _currentWaypoint;
 
     void Update()
     {
-        if (TransSelf.position.Equals(WayPoints[_currentWaypoint].position))
+        if (_isMoving == true)
         {
-            GoToNextWaypoint();
+            if (TransSelf.position.Equals(WayPoints[_currentWaypoint].position))
+            {
+                GoToNextWaypoint();
+            }
+            Vector3 lerpValue = Vector3.Lerp(TransSelf.position + TransSelf.forward, WayPoints[_currentWaypoint].transform.position, Time.deltaTime * TurnSpeed);
+            TransSelf.LookAt(lerpValue);
+            TransSelf.position = Vector3.MoveTowards(TransSelf.position, WayPoints[_currentWaypoint].transform.position, Speed * Time.deltaTime);
         }
-        Vector3 lerpValue = Vector3.Lerp(TransSelf.position + TransSelf.forward, WayPoints[_currentWaypoint].transform.position, Time.deltaTime * TurnSpeed);
-        TransSelf.LookAt(lerpValue);
-        TransSelf.position = Vector3.MoveTowards(TransSelf.position, WayPoints[_currentWaypoint].transform.position, Speed * Time.deltaTime);
     }
 
     void GoToNextWaypoint()
