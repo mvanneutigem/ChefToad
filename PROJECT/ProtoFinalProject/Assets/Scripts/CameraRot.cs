@@ -14,7 +14,7 @@ public class CameraRot : MonoBehaviour {
     {
         //set camera offset from target
         _offset = new Vector3(Target.position.x + distance, Target.position.y + distance, Target.position.z + distance);
-	}
+    }
 	
 	// Update is called once per frame
 	void Update ()
