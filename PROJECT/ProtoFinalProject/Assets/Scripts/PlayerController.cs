@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
             //scale camera forward to only have x and z axis to prevent character from angle-ing upwards/downwards
             var camforward = Vector3.Scale(mainCamera.transform.forward, new Vector3(1, 0, 1)).normalized;
 
-            //set the movevector, relative to the camera position
+            //set the movevector, relative to the camera direction
             _moveVector = (vInput * camforward + hInput * mainCamera.transform.right);
 
             //set the speed
