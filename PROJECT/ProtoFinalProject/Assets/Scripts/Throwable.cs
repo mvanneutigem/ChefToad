@@ -7,6 +7,7 @@ public class Throwable : MonoBehaviour {
     public Transform Player;
     public Transform Self;
     public float _carryHight = 0.2f;
+    public int _throwStrength = 500;
     private bool _carying = false;
     private Vector3 _position;
     private float _toadHeight;
@@ -31,7 +32,7 @@ public class Throwable : MonoBehaviour {
                 _carying = false;
                 Self.GetComponent<Rigidbody>().isKinematic = false;
                 //Self.GetComponent<SphereCollider>().isTrigger = false;
-                Self.GetComponent<Rigidbody>().AddForce(Player.forward*500);
+                Self.GetComponent<Rigidbody>().AddForce(Player.forward*_throwStrength);
             }
         }
     }
