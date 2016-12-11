@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 public class Patrol : MonoBehaviour
 {
-
+    public Transform[] Throwables;
     public Transform TransSelf;
     public Transform[] WayPoints;
     public float Speed = 3.0f;
@@ -32,6 +32,18 @@ public class Patrol : MonoBehaviour
         if (_currentWaypoint >= WayPoints.Length)
         {
             _currentWaypoint = 0;
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        for (int i = 0; i < Throwables.Length; i++)
+        {
+            if (other == Throwables[i].GetComponent<Collider>())
+            {
+                _isMoving = false;
+                TransSelf.GetComponent<Collider>().isTrigger = false;
+            }
         }
     }
 }
