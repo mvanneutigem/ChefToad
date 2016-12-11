@@ -90170,6 +90170,7 @@ MonoBehaviour:
   Player: {fileID: 1096136216}
   Self: {fileID: 1636313967}
   _carryHight: 0.2
+  _throwStrength: 300
 --- !u!54 &1636313969
 Rigidbody:
   m_ObjectHideFlags: 0
