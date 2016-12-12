@@ -17,6 +17,9 @@ public class PlayerController : MonoBehaviour
     private float _rotateSpeed = 0.03f;
     private bool _onLadder = false;
     private float _climbspeed = 5.0f;
+    private float _slidespeed = 10.0f;
+    private bool _onslope = false;
+    private Collider _slope;
 
     //METHODS
     void Awake()
@@ -28,6 +31,8 @@ public class PlayerController : MonoBehaviour
         //input
         float hInput = Input.GetAxisRaw("Horizontal");
         float vInput = Input.GetAxisRaw("Vertical");
+
+        //movement when falling/ climbing... or not...
         //if (_characterController.isGrounded)
         {
 
@@ -64,14 +69,20 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        //Debug.Log(Physics.gravity);
+        if (_onslope)
+        {
+            //dirty af but it works, bugggyyyyy!!!!
+            var left = -_slope.GetComponent<Transform>().right;
+            _moveVector += left * _slidespeed;
+        }
         //Gravity
-        _moveVector += Physics.gravity;// * Time.deltaTime;
-        //Debug.Log(_moveVector);
+        _moveVector += Physics.gravity;// * Time.deltaTime;//makes it fall too darn slowly
+
         //pass movement to char controller
         _characterController.Move(_moveVector * Time.deltaTime);
 
         _onLadder = false;
+        _onslope = false;
     }
 
     void OnTriggerStay(Collider other)
@@ -82,17 +93,21 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("enterladder");
             _onLadder = true;
+            //obviously not the best way but itll do for now
             Physics.gravity = Vector3.zero;
+        }
+        if (other.tag == "Slope")
+        {
+            _onslope = true;
+            Debug.Log("Slope");
+            _slope = other;
+
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        Debug.Log("untriggered");
-        //ladder
-        if (other.tag == "Ladder")
-        {
-            Physics.gravity = new Vector3(0, -9.81f, 0);
-        }
+        Physics.gravity = new Vector3 ( 0, -9.81f,0);
     }
+
 }
