@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
         //input
         float hInput = Input.GetAxisRaw("Horizontal");
         float vInput = Input.GetAxisRaw("Vertical");
-        if (_characterController.isGrounded)
+        //if (_characterController.isGrounded)
         {
 
             //scale camera forward to only have x and z axis to prevent character from angle-ing upwards/downwards
@@ -59,12 +59,15 @@ public class PlayerController : MonoBehaviour
             Debug.Log(vInput);
             if (_characterController.isGrounded && vInput > 0 || !_characterController.isGrounded)
             {
-                _moveVector = Vector3.up * vInput * _climbspeed;
+                //_characterController.transform.position += Vector3.up * vInput * _climbspeed;
+                _moveVector += Vector3.up * vInput * _climbspeed;
             }
         }
 
+        //Debug.Log(Physics.gravity);
         //Gravity
-        _moveVector += Physics.gravity * Time.deltaTime;
+        _moveVector += Physics.gravity;// * Time.deltaTime;
+        //Debug.Log(_moveVector);
         //pass movement to char controller
         _characterController.Move(_moveVector * Time.deltaTime);
 

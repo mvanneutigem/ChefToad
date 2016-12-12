@@ -5,12 +5,20 @@ public class Parent : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col)
     {
-        Debug.Log("parent");
-        col.transform.parent = transform.parent;
+        if (col.tag == "Player")
+        {
+            Debug.Log("parent");
+            col.transform.parent = transform.parent;
+        }
+
     }
     void OnTriggerExit(Collider col)
     {
         Debug.Log("unparent");
-        col.transform.parent = null;
+        if (col.transform.parent == transform.parent)
+        {
+            col.transform.parent = null;
+        }
+
     }
 }

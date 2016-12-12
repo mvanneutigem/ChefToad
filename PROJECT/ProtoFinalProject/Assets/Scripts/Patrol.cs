@@ -37,13 +37,19 @@ public class Patrol : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        for (int i = 0; i < Throwables.Length; i++)
+        if (other.tag == "Throwable")
         {
-            if (other == Throwables[i].GetComponent<Collider>())
-            {
-                _isMoving = false;
-                TransSelf.GetComponent<Collider>().isTrigger = false;
-            }
+            _isMoving = false;
+            TransSelf.GetComponent<Collider>().isTrigger = false;
+            TransSelf.localScale = new Vector3 (2.0f, 1.0f, 2.0f);
         }
+        //for (int i = 0; i < Throwables.Length; i++)
+        //{
+        //    if (other == Throwables[i].GetComponent<Collider>())
+        //    {
+        //        _isMoving = false;
+        //        TransSelf.GetComponent<Collider>().isTrigger = false;
+        //    }
+        //}
     }
 }
