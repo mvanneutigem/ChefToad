@@ -25,7 +25,7 @@ GameObject:
   - 114: {fileID: 114000011222809764}
   m_Layer: 0
   m_Name: Patroller
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,6 +103,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TransSelf: {fileID: 4000010513189156}
+  TransPlayer: {fileID: 0}
+  Throwables: []
   WayPoints:
   - {fileID: 4000010925424558, guid: e3c89e9bc51aa8a4bbde49ee17b43a69, type: 2}
   Speed: 3
+  TurnSpeed: 1
+  _slapDistance: 2
+  _scaling: 1
+  _isFry: 0
