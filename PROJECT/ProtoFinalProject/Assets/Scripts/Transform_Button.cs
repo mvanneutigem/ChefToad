@@ -25,12 +25,12 @@ public class Transform_Button : MonoBehaviour {
     private bool _yCorrect = false;
     private bool _zCorrect = false;
     private Vector3 _originalPosition;
-    private Quaternion _originalRotation;
+    public Vector3 _originalRotation;
 
     void Start ()
     {
         _originalPosition = ToTransform.position;
-        _originalRotation = ToTransform.rotation;
+        _originalRotation = ToTransform.eulerAngles;
 
         //x
         if (_speedX > 0)
@@ -188,7 +188,7 @@ public class Transform_Button : MonoBehaviour {
             {
                 if (_xSign == true)
                 {
-                    if (ToTransform.rotation.x - _originalRotation.x < _amountX)
+                    if (ToTransform.eulerAngles.x - _originalRotation.x < _amountX)
                     {
                         ToTransform.Rotate(_speedX, 0, 0);
                         _xCorrect = false;
@@ -200,7 +200,7 @@ public class Transform_Button : MonoBehaviour {
                 }
                 else
                 {
-                    if (ToTransform.rotation.x - _originalRotation.x > _amountX)
+                    if (ToTransform.eulerAngles.x - _originalRotation.x > _amountX)
                     {
                         ToTransform.Rotate(_speedX, 0, 0);
                         _xCorrect = false;
@@ -217,7 +217,7 @@ public class Transform_Button : MonoBehaviour {
             {
                 if (_ySign == true)
                 {
-                    if (ToTransform.rotation.y - _originalRotation.y < _amountY)
+                    if (ToTransform.eulerAngles.y - _originalRotation.y < _amountY)
                     {
                         ToTransform.Rotate(0, _speedY, 0);
                         _yCorrect = false;
@@ -229,7 +229,7 @@ public class Transform_Button : MonoBehaviour {
                 }
                 else
                 {
-                    if (ToTransform.rotation.y - _originalRotation.y > _amountY)
+                    if (ToTransform.eulerAngles.y - _originalRotation.y > _amountY)
                     {
                         ToTransform.Rotate(0, _speedY, 0);
                         _yCorrect = false;
@@ -246,7 +246,7 @@ public class Transform_Button : MonoBehaviour {
             {
                 if (_zSign == true)
                 {
-                    if (ToTransform.rotation.z - _originalRotation.z < _amountZ)
+                    if (ToTransform.eulerAngles.z - _originalRotation.z < _amountZ)
                     {
                         ToTransform.Rotate(0, 0, _speedZ);
                         _zCorrect = false;
@@ -258,7 +258,7 @@ public class Transform_Button : MonoBehaviour {
                 }
                 else
                 {
-                    if (ToTransform.rotation.z - _originalRotation.z > _amountZ)
+                    if (ToTransform.eulerAngles.z - _originalRotation.z > _amountZ)
                     {
                         ToTransform.Rotate(0, 0, _speedZ);
                         _zCorrect = false;

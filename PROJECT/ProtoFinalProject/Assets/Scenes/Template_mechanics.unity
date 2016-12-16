@@ -2149,19 +2149,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9ff1bf160b2ec842b0ff315b694b029, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TransSelf: {fileID: 176921234}
+  TransChild: {fileID: 0}
+  TransPlayer: {fileID: 1573274661}
   Throwables:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  TransSelf: {fileID: 176921234}
   WayPoints:
   - {fileID: 950446236}
   - {fileID: 3746237}
   Speed: 3
-  TurnSpeed: 1
+  TurnSpeed: 2
+  _slapDistance: 2
   _isMoving: 1
+  _scaling: 1
+  _isFry: 0
 --- !u!23 &176921231
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4262,14 +4267,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9ff1bf160b2ec842b0ff315b694b029, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Throwables: []
   TransSelf: {fileID: 395386001}
+  TransChild: {fileID: 0}
+  TransPlayer: {fileID: 1573274661}
+  Throwables: []
   WayPoints:
   - {fileID: 721005429}
   - {fileID: 1665407594}
   Speed: 3
   TurnSpeed: 1
+  _slapDistance: 2
   _isMoving: 1
+  _scaling: 1
+  _isFry: 0
 --- !u!23 &395385998
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15946,19 +15956,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9ff1bf160b2ec842b0ff315b694b029, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TransSelf: {fileID: 1403013172}
+  TransChild: {fileID: 0}
+  TransPlayer: {fileID: 1573274661}
   Throwables:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  TransSelf: {fileID: 1403013172}
   WayPoints:
   - {fileID: 2066277351}
   - {fileID: 956047811}
   Speed: 3
   TurnSpeed: 1
+  _slapDistance: 2
   _isMoving: 1
+  _scaling: 1
+  _isFry: 0
 --- !u!23 &1403013169
 MeshRenderer:
   m_ObjectHideFlags: 0
