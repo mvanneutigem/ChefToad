@@ -25,7 +25,7 @@ public class Transform_Button : MonoBehaviour {
     private bool _yCorrect = false;
     private bool _zCorrect = false;
     private Vector3 _originalPosition;
-    public Vector3 _originalRotation;
+    private Vector3 _originalRotation;
 
     void Start ()
     {
@@ -231,6 +231,14 @@ public class Transform_Button : MonoBehaviour {
                 {
                     if (ToTransform.eulerAngles.y - _originalRotation.y > _amountY)
                     {
+                        //Debug.Log("ToTransform.eulerAngles.y");
+                        //Debug.Log(ToTransform.eulerAngles.y);
+                        //Debug.Log("_originalRotation.y");
+                        //Debug.Log(_originalRotation.y);
+                        //Debug.Log("ToTransform.eulerAngles.y - _originalRotation.y");
+                        //Debug.Log(ToTransform.eulerAngles.y - _originalRotation.y);
+                        //Debug.Log("_amountY");
+                        //Debug.Log(_amountY);
                         ToTransform.Rotate(0, _speedY, 0);
                         _yCorrect = false;
                     }
@@ -239,6 +247,7 @@ public class Transform_Button : MonoBehaviour {
                         _yCorrect = true;
                     }
                 }
+               
             }
 
             //z
