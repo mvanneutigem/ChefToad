@@ -5,14 +5,13 @@ using System.Collections.Generic;
 public class Patrol : MonoBehaviour
 {
     public Transform TransSelf;
-    public Transform TransChild;
     public Transform TransPlayer;
     public Transform[] Throwables;
     public Transform[] WayPoints;
     public float Speed = 3.0f;
     public float TurnSpeed = 1.0f;
     public float _slapDistance = 2.0f;
-    public bool _isMoving = true;
+    private bool _isMoving = true;
     public bool _scaling = true;
     public bool _isFry = false;
     private bool _slap = false;
