@@ -39,7 +39,7 @@ public class Patrol : MonoBehaviour
                 {
                     if (_slap == false)
                     {
-                        Debug.Log("no_slap");
+                        //Debug.Log("no_slap");
                         //rotate in direction of player
                         var enemyLerp = TransSelf.position + TransSelf.forward;
                         enemyLerp.y = 0;
@@ -50,15 +50,15 @@ public class Patrol : MonoBehaviour
 
                         //when small enough angle start slap
                         float angle = Mathf.Acos(dotProd);
-                        Debug.Log(angle);
+                        //Debug.Log(angle);
                         if (Mathf.Abs( angle ) >= 3.0)
                         {
                             _slap = true;
                         }
                     }
-                    if (_slap == true)//&& TransSelf.eulerAngles.x <= 85)
+                    if (_slap == true)
                     {
-                        Debug.Log("slap");
+                        //Debug.Log("slap");
                         StartCoroutine(playanimation());
                     }
                 }
