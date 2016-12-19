@@ -68,11 +68,6 @@ public class PlayerController : MonoBehaviour
             {
                 _moveVector += Vector3.up * Mathf.Abs( Mathf.Sqrt(Mathf.Pow( vInput, 2) + Mathf.Pow(hInput, 2))) * _climbspeed;
             }
-
-            //if (_characterController.isGrounded && vInput > 0 || !_characterController.isGrounded)
-            //{
-            //    _moveVector += Vector3.up * Mathf.Abs(vInput * hInput) * _climbspeed;
-            //}
         }
 
         if (_onslope)
