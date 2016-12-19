@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private float _slidespeed = 10.0f;
     private bool _onslope = false;
     private Collider _slope;
+    Vector3 _ladderDir;
 
     //METHODS
     void Awake()
@@ -62,16 +63,21 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("ladder movement active");
             Debug.Log(vInput);
-            if (_characterController.isGrounded && vInput > 0 || !_characterController.isGrounded)
+
+            if (_characterController.isGrounded && ( _ladderDir.x > 0 && vInput > 0 || _ladderDir.x < 0 && vInput < 0) || (_ladderDir.z > 0 && hInput > 0 || _ladderDir.z < 0 && hInput < 0) || !_characterController.isGrounded)
             {
-                //_characterController.transform.position += Vector3.up * vInput * _climbspeed;
-                _moveVector += Vector3.up * vInput * _climbspeed;
+                _moveVector += Vector3.up * Mathf.Abs( Mathf.Sqrt(Mathf.Pow( vInput, 2) + Mathf.Pow(hInput, 2))) * _climbspeed;
             }
+
+            //if (_characterController.isGrounded && vInput > 0 || !_characterController.isGrounded)
+            //{
+            //    _moveVector += Vector3.up * Mathf.Abs(vInput * hInput) * _climbspeed;
+            //}
         }
 
         if (_onslope)
         {
-            //dirty af but it works, bugggyyyyy!!!!
+            //dirty af but it works,
             var left = -_slope.GetComponent<Transform>().right;
             _moveVector += left * _slidespeed;
         }
@@ -93,6 +99,11 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("enterladder");
             _onLadder = true;
+
+            //calculate vector from player to ladder.
+            _ladderDir = new Vector3(other.transform.position.x - transform.position.x, 0, other.transform.position.z - transform.position.z);
+            _ladderDir = _ladderDir.normalized;
+
             //obviously not the best way but itll do for now
             Physics.gravity = Vector3.zero;
         }
