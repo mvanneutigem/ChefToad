@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class Platform : MonoBehaviour
 {
 
+    //FIELDS
     public Transform TransSelf;
     public Transform[] WayPoints;
     public float Speed = 2.0f;
@@ -12,6 +13,7 @@ public class Platform : MonoBehaviour
     private bool _wait = false;
     private float _counter = 1.0f;
 
+    //METHODS
     void Update()
     {
         if (TransSelf.position.Equals(WayPoints[_currentWaypoint].position))

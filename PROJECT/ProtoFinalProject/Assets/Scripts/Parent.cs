@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Parent : MonoBehaviour {
 
+    //METHODS
 	void OnTriggerEnter(Collider col)
     {
         if (col.tag == "Player")

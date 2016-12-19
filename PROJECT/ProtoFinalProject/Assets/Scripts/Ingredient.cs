@@ -1,14 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PickUp : MonoBehaviour {
+public class Ingredient : MonoBehaviour
+{
 
     //FIELDS
     public int Scorevalue = 1;
     private GameController _gameController;
 
     //METHODs
-	
+
     void Start()
     {
         GameObject gameControllerObj = GameObject.FindWithTag("GameController");
@@ -18,15 +19,16 @@ public class PickUp : MonoBehaviour {
         }
     }
 
-	void Update () {
-	    this.transform.Rotate(0f,0f,1.0f);
-	}
+    void Update()
+    {
+        this.transform.Rotate(0f, 0f, 1.0f);
+    }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            _gameController.AddScore(Scorevalue);
+            _gameController.AddIngredient(Scorevalue);
             Destroy(gameObject);
 
         }
