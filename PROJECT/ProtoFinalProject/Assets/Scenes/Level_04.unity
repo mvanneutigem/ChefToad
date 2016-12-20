@@ -9177,6 +9177,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &314710947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 314710943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef2e4b4de7eb3bc46b2f88ebe16781ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TransSpawnpoint: {fileID: 866993026}
 --- !u!1 &317236641
 GameObject:
   m_ObjectHideFlags: 0
@@ -27415,6 +27427,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 864634310}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &866993025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 866993026}
+  m_Layer: 0
+  m_Name: spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 1182932734268802205, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &866993026
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 866993025}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.55, y: 1, z: -9.52}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 75
 --- !u!1 &867583247
 GameObject:
   m_ObjectHideFlags: 0
@@ -32001,6 +32041,14 @@ Prefab:
       propertyPath: WayPoints.Array.data[1]
       value: 
       objectReference: {fileID: 1920005218}
+    - target: {fileID: 1000012515126756, guid: 272b2910bb77593429047158cc590d39, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013340376492, guid: 272b2910bb77593429047158cc590d39, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 272b2910bb77593429047158cc590d39, type: 2}
   m_IsPrefabParent: 0
@@ -37902,6 +37950,14 @@ Prefab:
       propertyPath: WayPoints.Array.data[1]
       value: 
       objectReference: {fileID: 1920005218}
+    - target: {fileID: 1000010704403596, guid: 14c3823817c5b36438a400d79fcc5266, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013659510180, guid: 14c3823817c5b36438a400d79fcc5266, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14c3823817c5b36438a400d79fcc5266, type: 2}
   m_IsPrefabParent: 0
@@ -52724,6 +52780,10 @@ Prefab:
         type: 2}
       propertyPath: AnimationTitle
       value: wasabi
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011142305916, guid: 2ca8663a93947b448ba6a7f1716f2880, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ca8663a93947b448ba6a7f1716f2880, type: 2}
