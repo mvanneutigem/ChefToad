@@ -5,22 +5,24 @@ public class CameraRot : MonoBehaviour {
 
     //FIELDS
     public Transform Target;
-    private float _rotSpeed = 10.0f;
+    private float _rotSpeed = 20.0f;
     private Vector3 _offset;
-    public float distance = 10;
+    public float distance = 15;
     private float _followSpeed = 5.0f;//higher is slower
     //METHODS
     // Use this for initialization
     void Start ()
     {
         //set camera to target
-        _offset = new Vector3(Target.position.x, Target.position.y, Target.position.z );
+        //_offset = new Vector3(Target.position.x, Target.position.y, Target.position.z );
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        Debug.Log(_offset);
+        Debug.Log(Input.GetAxis("CameraX"));
+        Debug.Log(Input.GetAxis("CameraY"));
+        //Debug.Log(_offset);
         //change offset relative to input
         ////rot axis
         //_offset = Quaternion.AngleAxis(Input.GetAxis("CameraX") * _rotSpeed, Vector3.up) * Quaternion.AngleAxis(Input.GetAxis("CameraY") * _rotSpeed, transform.right) * _offset;
@@ -40,11 +42,10 @@ public class CameraRot : MonoBehaviour {
 
         //slow lookat
         var targetLookat = Target.position - transform.position;
-        var nextlookat = Vector3.Lerp(transform.forward, targetLookat, Time.deltaTime);
+        var nextlookat = Vector3.Lerp(transform.forward, targetLookat, _rotSpeed * Time.deltaTime);
 
         transform.forward = nextlookat;
         //transform.LookAt(Target.position);
-
         //slow followcam
         var spherepos = Target.position;
         var camerapos = transform.position;
