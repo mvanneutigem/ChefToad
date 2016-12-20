@@ -39,6 +39,7 @@ GameObject:
   - 4: {fileID: 4000011496664210}
   - 143: {fileID: 143000011533668976}
   - 114: {fileID: 114000010350722304}
+  - 114: {fileID: 114000012587112818}
   m_Layer: 0
   m_Name: Toad
   m_TagString: Player
@@ -189,6 +190,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
   _speed: 5
+--- !u!114 &114000012587112818
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012715269472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef2e4b4de7eb3bc46b2f88ebe16781ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TransSpawnpoint: {fileID: 0}
 --- !u!135 &135000010299048174
 SphereCollider:
   m_ObjectHideFlags: 1
