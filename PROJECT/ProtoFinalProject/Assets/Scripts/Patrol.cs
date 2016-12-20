@@ -123,8 +123,11 @@ public class Patrol : MonoBehaviour
             _playinganimation = true;
         }
 
-        cylinder.transform.rotation = Quaternion.AngleAxis(90.0f, Vector3.forward);
+        //cylinder.transform.rotation =  Quaternion.AngleAxis(90.0f, Vector3.forward);
+        // = Quaternion.AngleAxis(90.0f, Vector3.forward);
         _timeout = true;
+        yield return new WaitForSeconds(0.8f);
+        cylinder.transform.Rotate(Vector3.forward, 90.0f);
         yield return new WaitForSeconds(5.0f);
         _timeout = false;
         _playinganimation = false;

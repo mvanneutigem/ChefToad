@@ -27,7 +27,8 @@ public class Throwable : MonoBehaviour {
         if (_carying == true)
         {
             Self.position = _position;
-            if (Input.GetKeyDown("e"))
+            if (Input.GetButtonDown("Fire1"))
+            //if (Input.GetKeyDown("e"))
             {
                 _carying = false;
                 Self.GetComponent<Rigidbody>().isKinematic = false;
@@ -41,7 +42,8 @@ public class Throwable : MonoBehaviour {
     {
         if (other == Player.GetComponent<Collider>())
         {
-            if (Input.GetKeyUp("e"))
+            if (Input.GetButtonUp("Fire1"))
+            // if (Input.GetKeyUp("e"))
             {
                 _carying = true;
             }
