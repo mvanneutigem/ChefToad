@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: b4928e691d80ad948bf5a3f2cb287176
-timeCreated: 1481281825
+guid: 911a8c3e8ce7887469e17554ca174848
+timeCreated: 1482331496
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,8 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: mesh_BuildingBlock5SideChamfer
-    4300002: BuildingBlock5SideChamfer
+    4300000: Toad
   materials:
     importMaterials: 1
     materialName: 0
