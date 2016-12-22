@@ -3167,12 +3167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TransSelf: {fileID: 70382785}
+  cylinder: {fileID: 0}
   TransPlayer: {fileID: 1096136216}
-  Throwables:
-  - {fileID: 1636313967}
-  - {fileID: 1125529601}
-  - {fileID: 1100407513}
-  - {fileID: 327922522}
   WayPoints:
   - {fileID: 1494464639}
   - {fileID: 1315580777}
@@ -3181,6 +3177,8 @@ MonoBehaviour:
   _slapDistance: 1.5
   _scaling: 0
   _isFry: 0
+  enemy: {fileID: 0}
+  AnimationTitle: 
 --- !u!1001 &72664075
 Prefab:
   m_ObjectHideFlags: 0
@@ -17512,11 +17510,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 324776175}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &327922522 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4000012801045568, guid: 80ad666d3f434e14e95605eccc0683e9,
-    type: 2}
-  m_PrefabInternal: {fileID: 1289645360}
 --- !u!1 &328615251
 GameObject:
   m_ObjectHideFlags: 0
@@ -18386,14 +18379,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TransSelf: {fileID: 349136562}
+  cylinder: {fileID: 0}
   TransPlayer: {fileID: 0}
-  Throwables: []
   WayPoints: []
   Speed: 3
   TurnSpeed: 1
   _slapDistance: 1.5
   _scaling: 0
   _isFry: 0
+  enemy: {fileID: 0}
+  AnimationTitle: 
 --- !u!1 &349251796
 GameObject:
   m_ObjectHideFlags: 0
@@ -19386,12 +19381,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TransSelf: {fileID: 366895923}
+  cylinder: {fileID: 0}
   TransPlayer: {fileID: 1096136216}
-  Throwables:
-  - {fileID: 1636313967}
-  - {fileID: 1125529601}
-  - {fileID: 1100407513}
-  - {fileID: 327922522}
   WayPoints:
   - {fileID: 1453372908}
   - {fileID: 1521870425}
@@ -19400,6 +19391,8 @@ MonoBehaviour:
   _slapDistance: 1.5
   _scaling: 0
   _isFry: 0
+  enemy: {fileID: 0}
+  AnimationTitle: 
 --- !u!23 &366895925
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20699,6 +20692,48 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 391251944}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &391575283
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 168061730}
+    m_Modifications:
+    - target: {fileID: 4000011626508680, guid: 4fb25e02ab908eb41b42f395e8726dd5, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011626508680, guid: 4fb25e02ab908eb41b42f395e8726dd5, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011626508680, guid: 4fb25e02ab908eb41b42f395e8726dd5, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011626508680, guid: 4fb25e02ab908eb41b42f395e8726dd5, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.000000057600907
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011626508680, guid: 4fb25e02ab908eb41b42f395e8726dd5, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.70711
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011626508680, guid: 4fb25e02ab908eb41b42f395e8726dd5, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0.000000057601405
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011626508680, guid: 4fb25e02ab908eb41b42f395e8726dd5, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: -0.70710367
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011626508680, guid: 4fb25e02ab908eb41b42f395e8726dd5, type: 2}
+      propertyPath: m_RootOrder
+      value: 920
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4fb25e02ab908eb41b42f395e8726dd5, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &394861102
 GameObject:
   m_ObjectHideFlags: 0
@@ -31636,85 +31671,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 587983963}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &588938281
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 588938282}
-  - 33: {fileID: 588938285}
-  - 23: {fileID: 588938284}
-  - 65: {fileID: 588938283}
-  m_Layer: 0
-  m_Name: Liquid
-  m_TagString: Enemy
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &588938282
+--- !u!4 &588938282 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 588938281}
-  m_LocalRotation: {x: -0.000000057600907, y: 0.70711, z: -0.000000057601405, w: -0.70710367}
-  m_LocalPosition: {x: 0, y: 1.66, z: 0}
-  m_LocalScale: {x: 1.9, y: 1, z: 1.9}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 168061730}
-  m_RootOrder: 920
---- !u!65 &588938283
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 588938281}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 4.734044e-16, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &588938284
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 588938281}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: b80d46d6d76d8094e81d2bf82cb18265, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!33 &588938285
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 588938281}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_PrefabParentObject: {fileID: 4000011626508680, guid: 4fb25e02ab908eb41b42f395e8726dd5,
+    type: 2}
+  m_PrefabInternal: {fileID: 391575283}
 --- !u!1 &591042348
 GameObject:
   m_ObjectHideFlags: 0
@@ -59954,11 +59915,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1099657471}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1100407513 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4000012801045568, guid: 80ad666d3f434e14e95605eccc0683e9,
-    type: 2}
-  m_PrefabInternal: {fileID: 1756784017}
 --- !u!1 &1100840598
 GameObject:
   m_ObjectHideFlags: 0
@@ -60892,11 +60848,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e3c89e9bc51aa8a4bbde49ee17b43a69, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1125529601 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4000012801045568, guid: 80ad666d3f434e14e95605eccc0683e9,
-    type: 2}
-  m_PrefabInternal: {fileID: 1833673267}
 --- !u!1 &1126843248
 GameObject:
   m_ObjectHideFlags: 0
@@ -63122,12 +63073,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TransSelf: {fileID: 1160661490}
+  cylinder: {fileID: 0}
   TransPlayer: {fileID: 1096136216}
-  Throwables:
-  - {fileID: 1636313967}
-  - {fileID: 1125529601}
-  - {fileID: 1100407513}
-  - {fileID: 327922522}
   WayPoints:
   - {fileID: 1071670569}
   - {fileID: 681319507}
@@ -63136,6 +63083,8 @@ MonoBehaviour:
   _slapDistance: 1.5
   _scaling: 0
   _isFry: 0
+  enemy: {fileID: 0}
+  AnimationTitle: 
 --- !u!1 &1160972503
 GameObject:
   m_ObjectHideFlags: 0
@@ -64168,12 +64117,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TransSelf: {fileID: 1174569872}
+  cylinder: {fileID: 0}
   TransPlayer: {fileID: 1096136216}
-  Throwables:
-  - {fileID: 1636313967}
-  - {fileID: 1125529601}
-  - {fileID: 1100407513}
-  - {fileID: 327922522}
   WayPoints:
   - {fileID: 1004821035}
   - {fileID: 1613549130}
@@ -64182,6 +64127,8 @@ MonoBehaviour:
   _slapDistance: 1.5
   _scaling: 0
   _isFry: 0
+  enemy: {fileID: 0}
+  AnimationTitle: 
 --- !u!23 &1174569874
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -79984,8 +79931,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TransSelf: {fileID: 1441877515}
+  cylinder: {fileID: 0}
   TransPlayer: {fileID: 1096136216}
-  Throwables: []
   WayPoints:
   - {fileID: 697863539}
   - {fileID: 770073960}
@@ -79998,6 +79945,8 @@ MonoBehaviour:
   _slapDistance: 1.5
   _scaling: 0
   _isFry: 0
+  enemy: {fileID: 0}
+  AnimationTitle: 
 --- !u!1 &1443108678
 GameObject:
   m_ObjectHideFlags: 0
@@ -90463,11 +90412,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1633835570}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1636313967 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4000012801045568, guid: 80ad666d3f434e14e95605eccc0683e9,
-    type: 2}
-  m_PrefabInternal: {fileID: 754944829}
 --- !u!1 &1639605325
 GameObject:
   m_ObjectHideFlags: 0
@@ -93809,8 +93753,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TransSelf: {fileID: 1712647544}
+  cylinder: {fileID: 0}
   TransPlayer: {fileID: 1096136216}
-  Throwables: []
   WayPoints:
   - {fileID: 132104864}
   - {fileID: 1461269499}
@@ -93827,6 +93771,8 @@ MonoBehaviour:
   _slapDistance: 3
   _scaling: 0
   _isFry: 1
+  enemy: {fileID: 0}
+  AnimationTitle: 
 --- !u!1 &1712956985
 GameObject:
   m_ObjectHideFlags: 0
