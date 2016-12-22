@@ -28,14 +28,14 @@ public class Patrol : MonoBehaviour
         Debug.Log(_timeout);
         if (_isMoving == true &&!_timeout)
         {
-            if (_isFry == true)
+            //if (_isFry == true)
             {
 
                 //calculate direction from enemy to player (excluding y direction)
                 Vector3 dirFromAtoB = new Vector3( TransSelf.transform.position.x - TransPlayer.transform.position.x, 0,TransSelf.transform.position.z - TransPlayer.transform.position.z).normalized;
                 float dotProd = Vector3.Dot(dirFromAtoB, TransSelf.transform.forward);
 
-                if (_distance <= _slapDistance)
+                if (_distance <= _slapDistance && _isFry)
                 {
                     if (_slap == false)
                     {
@@ -47,6 +47,7 @@ public class Patrol : MonoBehaviour
                         playerLerp.y = 0;
                         Vector3 lerpValuePlayer = Vector3.Lerp(enemyLerp, playerLerp, Time.deltaTime * TurnSpeed);
                         TransSelf.LookAt(lerpValuePlayer);
+                        GetComponent<Transform>().eulerAngles = new Vector3(0, GetComponent<Transform>().eulerAngles.y, 0);
 
                         //when small enough angle start slap
                         float angle = Mathf.Acos(dotProd);
@@ -71,22 +72,24 @@ public class Patrol : MonoBehaviour
                     }
                     Vector3 lerpValue = Vector3.Lerp(TransSelf.position + TransSelf.forward, WayPoints[_currentWaypoint].transform.position, Time.deltaTime * TurnSpeed);
                     TransSelf.LookAt(lerpValue);
+                    GetComponent<Transform>().eulerAngles = new Vector3(0, GetComponent<Transform>().eulerAngles.y, 0);
                     TransSelf.position = Vector3.MoveTowards(TransSelf.position, WayPoints[_currentWaypoint].transform.position, Speed * Time.deltaTime);
                 }
 
 
 
             }
-            else 
-            {
-                if (TransSelf.position.Equals(WayPoints[_currentWaypoint].position))
-                {
-                    GoToNextWaypoint();
-                }
-                Vector3 lerpValue = Vector3.Lerp(TransSelf.position + TransSelf.forward, WayPoints[_currentWaypoint].transform.position, Time.deltaTime * TurnSpeed);
-                TransSelf.LookAt(lerpValue);
-                TransSelf.position = Vector3.MoveTowards(TransSelf.position, WayPoints[_currentWaypoint].transform.position, Speed * Time.deltaTime);
-            }
+            //else 
+            //{
+            //    //
+            //    if (TransSelf.position.Equals(WayPoints[_currentWaypoint].position))
+            //    {
+            //        GoToNextWaypoint();
+            //    }
+            //    Vector3 lerpValue = Vector3.Lerp(TransSelf.position + TransSelf.forward, WayPoints[_currentWaypoint].transform.position, Time.deltaTime * TurnSpeed);
+            //    TransSelf.LookAt(lerpValue);
+            //    TransSelf.position = Vector3.MoveTowards(TransSelf.position, WayPoints[_currentWaypoint].transform.position, Speed * Time.deltaTime);
+            //}
         }
     }
 
