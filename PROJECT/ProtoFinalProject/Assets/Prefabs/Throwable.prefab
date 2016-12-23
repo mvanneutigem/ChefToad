@@ -109,7 +109,7 @@ MonoBehaviour:
   SpawnPoint: {fileID: 0}
   Player: {fileID: 0}
   Self: {fileID: 4000012801045568}
-  _carryHight: 0.2
+  _carryHight: 1
   _throwStrength: 200
 --- !u!135 &135000011392989528
 SphereCollider:
