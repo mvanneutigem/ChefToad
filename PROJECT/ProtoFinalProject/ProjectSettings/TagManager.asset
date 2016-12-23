@@ -10,6 +10,7 @@ TagManager:
   - Slope
   - Enemy
   - GameController
+  - InvisibleWall
   layers:
   - Default
   - TransparentFX

@@ -36,6 +36,11 @@ public class Throwable : MonoBehaviour {
                 Self.GetComponent<Rigidbody>().AddForce(Player.forward*_throwStrength);
             }
         }
+
+        if (Self.position.y <= -10)
+        {
+            StartCoroutine(Respawn());
+        }
     }
 
     void OnTriggerStay(Collider other)
@@ -48,14 +53,32 @@ public class Throwable : MonoBehaviour {
                 _carying = true;
             }
         }
+
+        if (other.tag == "InvisibleWall")
+        {
+            Physics.IgnoreCollision(other, gameObject.GetComponent<Collider>());
+        }
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other != Player.GetComponent<Collider>())
         {
-            Self.position = SpawnPoint.position;
-            Self.GetComponent<Rigidbody>().isKinematic = true;
+            StartCoroutine(Respawn());
+            //Self.position = SpawnPoint.position;
+            //Self.GetComponent<Rigidbody>().isKinematic = true;
+        }
+
+        if(other.tag == "wall")
+        {
+            Physics.IgnoreCollision(other, gameObject.GetComponent<Collider>());
         }
     }
-}
+
+    private IEnumerator Respawn()
+    {
+        yield return new WaitForSeconds(5f);
+        Self.position = SpawnPoint.position;
+        Self.GetComponent<Rigidbody>().isKinematic = true;
+    }
+    }
