@@ -21,6 +21,7 @@ public class Patrol : MonoBehaviour
     private bool _playinganimation = false;
     private bool _timeout = false;
     public string AnimationTitle;
+    public float TimeOut = 5.0f;
 
     void Update()
     {
@@ -131,7 +132,7 @@ public class Patrol : MonoBehaviour
         _timeout = true;
         yield return new WaitForSeconds(0.8f);
         cylinder.transform.Rotate(Vector3.forward, 90.0f);
-        yield return new WaitForSeconds(5.0f);
+        yield return new WaitForSeconds(TimeOut);
         _timeout = false;
         _playinganimation = false;
         Debug.Log("waited");
