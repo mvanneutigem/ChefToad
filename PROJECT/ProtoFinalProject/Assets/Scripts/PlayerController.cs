@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 _moveVector = Vector3.zero;
     private CharacterController _characterController;
     public GameObject mainCamera;
+    public GameObject Toad;
     [SerializeField]
     private float _speed = 5.0f;
     private float _rotateSpeed = 0.03f;
@@ -26,6 +27,9 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         _characterController = this.GetComponent<CharacterController>();
+        Toad.GetComponent<Animation>()["walk"].speed = 2.0f;
+        Toad.GetComponent<Animation>()["climb"].speed = 4.0f;
+        Toad.GetComponent<Animation>()["idle"].speed = 2.0f;
     }
     void Update()
     {
@@ -58,6 +62,8 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+
+
         //ladder
         if (_onLadder )
         {
@@ -81,6 +87,26 @@ public class PlayerController : MonoBehaviour
 
         //pass movement to char controller
         _characterController.Move(_moveVector * Time.deltaTime);
+
+        //animations
+        if (Mathf.Abs(hInput) > 0 || Mathf.Abs(vInput) > 0)
+        {
+            if (_onLadder)
+            {
+                //play climb anim
+                Toad.GetComponent<Animation>().Play("climb");
+            }
+            else
+            {
+                //play walk
+                Toad.GetComponent<Animation>().Play("walk");
+            }
+        }
+        else
+        {
+            //play idle
+            Toad.GetComponent<Animation>().Play("idle");
+        }
 
         _onLadder = false;
         _onslope = false;
