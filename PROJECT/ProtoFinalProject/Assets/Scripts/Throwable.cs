@@ -12,6 +12,9 @@ public class Throwable : MonoBehaviour {
     private Vector3 _position;
     private float _toadHeight;
 
+    private Vector3 _previous;
+    private float _velocity;
+
 
 	void Start ()
     {
@@ -26,6 +29,8 @@ public class Throwable : MonoBehaviour {
 
         if (_carying == true)
         {
+            _velocity = ((transform.position - _previous).magnitude) / Time.deltaTime;
+            _previous = transform.position;
             Self.position = _position;
             if (Input.GetButtonDown("Fire1"))
             //if (Input.GetKeyDown("e"))
@@ -33,7 +38,11 @@ public class Throwable : MonoBehaviour {
                 _carying = false;
                 Self.GetComponent<Rigidbody>().isKinematic = false;
                 //Self.GetComponent<SphereCollider>().isTrigger = false;
-                Self.GetComponent<Rigidbody>().AddForce(Player.forward*_throwStrength);
+                Self.GetComponent<Rigidbody>().AddForce(Player.forward*(_throwStrength + _velocity*10));
+                if(_velocity > 0)
+                {
+                    Self.GetComponent<Rigidbody>().AddForce(0,100,0);
+                }
             }
         }
 
@@ -65,11 +74,12 @@ public class Throwable : MonoBehaviour {
         if (other != Player.GetComponent<Collider>())
         {
             StartCoroutine(Respawn());
+            GetComponent<MeshRenderer>().enabled = false;
             //Self.position = SpawnPoint.position;
             //Self.GetComponent<Rigidbody>().isKinematic = true;
         }
 
-        if(other.tag == "wall")
+        if(other.tag == "InvisibleWall")
         {
             Physics.IgnoreCollision(other, gameObject.GetComponent<Collider>());
         }
@@ -79,6 +89,7 @@ public class Throwable : MonoBehaviour {
     {
         yield return new WaitForSeconds(5f);
         Self.position = SpawnPoint.position;
+        GetComponent<MeshRenderer>().enabled = true;
         Self.GetComponent<Rigidbody>().isKinematic = true;
     }
     }

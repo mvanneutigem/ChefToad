@@ -11,6 +11,7 @@ TagManager:
   - Enemy
   - GameController
   - InvisibleWall
+  - Water
   layers:
   - Default
   - TransparentFX
