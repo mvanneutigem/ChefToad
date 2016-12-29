@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     private float _speed = 5.0f;
     private float _rotateSpeed = 0.03f;
     private bool _onLadder = false;
-    private float _climbspeed = 5.0f;
+    private float _climbspeed = 3.0f;
     private float _slidespeed = 10.0f;
     private bool _onslope = false;
     private Collider _slope;
@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
     {
         _characterController = this.GetComponent<CharacterController>();
         Toad.GetComponent<Animation>()["walk"].speed = 2.0f;
-        Toad.GetComponent<Animation>()["climb"].speed = 4.0f;
+        Toad.GetComponent<Animation>()["climb"].speed = 2.0f;
         Toad.GetComponent<Animation>()["idle"].speed = 2.0f;
     }
     void Update()
@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
         {
             if (_onLadder)
             {
-                //play climb anim
+                //play climb
                 Toad.GetComponent<Animation>().Play("climb");
             }
             else
