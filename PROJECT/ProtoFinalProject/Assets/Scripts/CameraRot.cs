@@ -42,9 +42,8 @@ public class CameraRot : MonoBehaviour {
 
         //slow lookat
         var targetLookat = Target.position - transform.position;
-        var nextlookat = Vector3.Lerp(transform.forward, targetLookat, _rotSpeed * Time.deltaTime);
+        var nextlookat = Vector3.Lerp(transform.forward, targetLookat, Time.deltaTime);
 
-        transform.forward = nextlookat;
         //transform.LookAt(Target.position);
         //slow followcam
         var spherepos = Target.position;
@@ -56,7 +55,20 @@ public class CameraRot : MonoBehaviour {
         var targetVector = new Vector3(targetpos.x - camerapos.x, targetpos.y - camerapos.y, targetpos.z - camerapos.z) / _followSpeed;
         var newpos = new Vector3(camerapos.x + targetVector.x, camerapos.y + targetVector.y, camerapos.z + targetVector.z);
 
+        if (Mathf.Abs(nextlookat.y) > 0.95f)
+        {
+            if (nextlookat.y > 0)
+            {
+                nextlookat.y = 0.95f;
+            }
+            else
+            {
+                nextlookat.y = -0.95f;
+            }
+            newpos.y = camerapos.y;
+        }
         transform.position = newpos;
+        transform.forward = nextlookat;
 
     }
 }
