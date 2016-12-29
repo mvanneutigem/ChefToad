@@ -3261,7 +3261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TransSelf: {fileID: 70382785}
   cylinder: {fileID: 0}
-  TransPlayer: {fileID: 1096136216}
+  TransPlayer: {fileID: 0}
   WayPoints:
   - {fileID: 1494464639}
   - {fileID: 1315580777}
@@ -3272,6 +3272,7 @@ MonoBehaviour:
   _isFry: 0
   enemy: {fileID: 0}
   AnimationTitle: 
+  TimeOut: 5
 --- !u!1001 &72664075
 Prefab:
   m_ObjectHideFlags: 0
@@ -17819,7 +17820,7 @@ Prefab:
         type: 2}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 1096136216}
+      objectReference: {fileID: 0}
     - target: {fileID: 1000010963823900, guid: b86a4b90e9450904a8f80138b2e0dea3, type: 2}
       propertyPath: m_TagString
       value: Throwable
@@ -18478,6 +18479,7 @@ MonoBehaviour:
   _isFry: 0
   enemy: {fileID: 0}
   AnimationTitle: 
+  TimeOut: 5
 --- !u!1 &349251796
 GameObject:
   m_ObjectHideFlags: 0
@@ -19471,7 +19473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TransSelf: {fileID: 366895923}
   cylinder: {fileID: 0}
-  TransPlayer: {fileID: 1096136216}
+  TransPlayer: {fileID: 0}
   WayPoints:
   - {fileID: 1453372908}
   - {fileID: 1521870425}
@@ -19482,6 +19484,7 @@ MonoBehaviour:
   _isFry: 0
   enemy: {fileID: 0}
   AnimationTitle: 
+  TimeOut: 5
 --- !u!23 &366895925
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31872,7 +31875,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
 --- !u!1 &593731704
 GameObject:
   m_ObjectHideFlags: 0
@@ -34665,7 +34668,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!1 &642955594
 GameObject:
   m_ObjectHideFlags: 0
@@ -50039,7 +50042,7 @@ Prefab:
     - target: {fileID: 224000010518333844, guid: 31ee56bdc9e846143995e351ba9ce14c,
         type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 224000010518333844, guid: 31ee56bdc9e846143995e351ba9ce14c,
         type: 2}
@@ -50437,7 +50440,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
 --- !u!1 &930765019
 GameObject:
   m_ObjectHideFlags: 0
@@ -59659,43 +59662,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1092125919}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1096136213 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000012715269472, guid: 439219fc14f936749a10a14349accc51,
-    type: 2}
-  m_PrefabInternal: {fileID: 47223577}
---- !u!4 &1096136216 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4000011496664210, guid: 439219fc14f936749a10a14349accc51,
-    type: 2}
-  m_PrefabInternal: {fileID: 47223577}
---- !u!54 &1096136217
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1096136213}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &1096136218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1096136213}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef2e4b4de7eb3bc46b2f88ebe16781ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TransSpawnpoint: {fileID: 67089335}
 --- !u!1 &1099364771
 GameObject:
   m_ObjectHideFlags: 0
@@ -62852,6 +62818,7 @@ GameObject:
   - 33: {fileID: 1158842246}
   - 65: {fileID: 1158842245}
   - 23: {fileID: 1158842244}
+  - 114: {fileID: 1158842247}
   m_Layer: 0
   m_Name: Cube (1200)
   m_TagString: Untagged
@@ -62920,6 +62887,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1158842242}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1158842247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1158842242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 783da6491c4e89a49b68b52413e0cb2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scene: 2
 --- !u!1 &1160661489
 GameObject:
   m_ObjectHideFlags: 0
@@ -63013,7 +62992,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TransSelf: {fileID: 1160661490}
   cylinder: {fileID: 0}
-  TransPlayer: {fileID: 1096136216}
+  TransPlayer: {fileID: 0}
   WayPoints:
   - {fileID: 1071670569}
   - {fileID: 681319507}
@@ -63024,6 +63003,7 @@ MonoBehaviour:
   _isFry: 0
   enemy: {fileID: 0}
   AnimationTitle: 
+  TimeOut: 5
 --- !u!1 &1160972503
 GameObject:
   m_ObjectHideFlags: 0
@@ -64057,7 +64037,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TransSelf: {fileID: 1174569872}
   cylinder: {fileID: 0}
-  TransPlayer: {fileID: 1096136216}
+  TransPlayer: {fileID: 0}
   WayPoints:
   - {fileID: 1004821035}
   - {fileID: 1613549130}
@@ -64068,6 +64048,7 @@ MonoBehaviour:
   _isFry: 0
   enemy: {fileID: 0}
   AnimationTitle: 
+  TimeOut: 5
 --- !u!23 &1174569874
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -70958,7 +70939,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012801045568, guid: 80ad666d3f434e14e95605eccc0683e9, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1000014138382884, guid: 80ad666d3f434e14e95605eccc0683e9, type: 2}
       propertyPath: m_Name
@@ -70973,7 +70954,7 @@ Prefab:
         type: 2}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 1096136216}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 80ad666d3f434e14e95605eccc0683e9, type: 2}
   m_IsPrefabParent: 0
@@ -74817,7 +74798,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010123784706, guid: 8444ca6d01cf68e4ea8d8de51e9fcef7, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 23000014094675884, guid: 8444ca6d01cf68e4ea8d8de51e9fcef7,
         type: 2}
@@ -79980,7 +79961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TransSelf: {fileID: 1441877515}
   cylinder: {fileID: 0}
-  TransPlayer: {fileID: 1096136216}
+  TransPlayer: {fileID: 0}
   WayPoints:
   - {fileID: 697863539}
   - {fileID: 770073960}
@@ -79995,6 +79976,7 @@ MonoBehaviour:
   _isFry: 0
   enemy: {fileID: 0}
   AnimationTitle: 
+  TimeOut: 5
 --- !u!1 &1443108678
 GameObject:
   m_ObjectHideFlags: 0
@@ -83559,7 +83541,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1 &1510650024
 GameObject:
   m_ObjectHideFlags: 0
@@ -85266,7 +85248,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012558898250, guid: 14c3823817c5b36438a400d79fcc5266, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114000013241549946, guid: 14c3823817c5b36438a400d79fcc5266,
         type: 2}
@@ -85322,7 +85304,7 @@ Prefab:
         type: 2}
       propertyPath: TransPlayer
       value: 
-      objectReference: {fileID: 1096136216}
+      objectReference: {fileID: 0}
     - target: {fileID: 114000013241549946, guid: 14c3823817c5b36438a400d79fcc5266,
         type: 2}
       propertyPath: Speed
@@ -86378,7 +86360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da040b070e61da647b703d2c8ae83b52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1096136216}
+  Player: {fileID: 0}
   ToTransform: {fileID: 1608006826}
   _speedX: 0
   _speedY: 0.02
@@ -88064,7 +88046,7 @@ Prefab:
         type: 2}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 1096136216}
+      objectReference: {fileID: 0}
     - target: {fileID: 1000010963823900, guid: b86a4b90e9450904a8f80138b2e0dea3, type: 2}
       propertyPath: m_TagString
       value: Throwable
@@ -90984,7 +90966,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!1 &1642559722
 GameObject:
   m_ObjectHideFlags: 0
@@ -91658,7 +91640,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011723202692, guid: b86a4b90e9450904a8f80138b2e0dea3, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114000012539342174, guid: b86a4b90e9450904a8f80138b2e0dea3,
         type: 2}
@@ -91669,7 +91651,7 @@ Prefab:
         type: 2}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 1096136216}
+      objectReference: {fileID: 0}
     - target: {fileID: 1000010963823900, guid: b86a4b90e9450904a8f80138b2e0dea3, type: 2}
       propertyPath: m_TagString
       value: Throwable
@@ -92509,7 +92491,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011566635810, guid: 5f74b879d7912ec41b3bc1ed53479620, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114000011417830582, guid: 5f74b879d7912ec41b3bc1ed53479620,
         type: 2}
@@ -92877,7 +92859,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012801045568, guid: 80ad666d3f434e14e95605eccc0683e9, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1000014138382884, guid: 80ad666d3f434e14e95605eccc0683e9, type: 2}
       propertyPath: m_Name
@@ -92892,7 +92874,7 @@ Prefab:
         type: 2}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 1096136216}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 80ad666d3f434e14e95605eccc0683e9, type: 2}
   m_IsPrefabParent: 0
@@ -94096,7 +94078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TransSelf: {fileID: 1712647544}
   cylinder: {fileID: 0}
-  TransPlayer: {fileID: 1096136216}
+  TransPlayer: {fileID: 0}
   WayPoints:
   - {fileID: 132104864}
   - {fileID: 1461269499}
@@ -94115,6 +94097,7 @@ MonoBehaviour:
   _isFry: 1
   enemy: {fileID: 0}
   AnimationTitle: 
+  TimeOut: 5
 --- !u!1 &1712956985
 GameObject:
   m_ObjectHideFlags: 0
@@ -99609,7 +99592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899b9ff1424d4ca45be5bca29a15a069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 1096136216}
+  Target: {fileID: 0}
   distance: 7
 --- !u!81 &1851644725
 AudioListener:
@@ -99678,7 +99661,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 19.361, y: -177.54001, z: -0.446}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1 &1853004163
 GameObject:
   m_ObjectHideFlags: 0
@@ -109287,7 +109270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da040b070e61da647b703d2c8ae83b52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1096136216}
+  Player: {fileID: 0}
   ToTransform: {fileID: 1608006826}
   _speedX: 0
   _speedY: -0.02

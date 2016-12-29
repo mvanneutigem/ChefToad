@@ -24,7 +24,7 @@ GameObject:
   - 65: {fileID: 65000011449035350}
   m_Layer: 0
   m_Name: Liquid
-  m_TagString: Enemy
+  m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
