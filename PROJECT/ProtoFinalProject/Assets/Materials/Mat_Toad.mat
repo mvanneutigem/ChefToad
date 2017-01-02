@@ -48,7 +48,7 @@ Material:
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: a086c279e4ae54e4c857083ab232d2bc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -71,6 +71,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
+        name: PixelSnap
+      second: 0
+    - first:
         name: _BumpScale
       second: 1
     - first:
@@ -80,6 +83,9 @@ Material:
         name: _DetailNormalMapScale
       second: 1
     - first:
+        name: _DiffuseThreshold
+      second: 0.52
+    - first:
         name: _DstBlend
       second: 0
     - first:
@@ -87,7 +93,7 @@ Material:
       second: 1
     - first:
         name: _Glossiness
-      second: 0.5
+      second: 0
     - first:
         name: _GlossyReflections
       second: 1
@@ -101,8 +107,14 @@ Material:
         name: _OcclusionStrength
       second: 1
     - first:
+        name: _OutlineThickness
+      second: 0.3
+    - first:
         name: _Parallax
       second: 0.02
+    - first:
+        name: _Shininess
+      second: 1
     - first:
         name: _SmoothnessTextureChannel
       second: 0
@@ -121,13 +133,19 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 1, g: 0.19117647, b: 0.19117647, a: 1}
+      second: {r: 1, g: 0.014705896, b: 0.014705896, a: 0}
     - first:
         name: _Color1
-      second: {r: 1, g: 1, b: 1, a: 1}
+      second: {r: 0.77647066, g: 0.76857346, b: 0.4901961, a: 1}
     - first:
         name: _Color2
       second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _SpecColor
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: _UnlitColor
+      second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
