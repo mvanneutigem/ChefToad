@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour {
     //FIELDS
     public Text scoreText;
     public Text ingredientText;
+    public bool ScoreScreen = false;
     private int score;
     private int ingredients;
     //METHODS
@@ -19,12 +20,19 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+	if(ScoreScreen)
+        {
+            score = PlayerPrefs.GetInt("Score");
+            UpdateScore();
+            ingredients = PlayerPrefs.GetInt("Ingredients");
+            UpdateIngredients();
+        }
 	}
 
     void UpdateScore()
     {
         scoreText.text = "Score: " + score;
+        PlayerPrefs.SetInt("Score", score);
     }
 
     public void AddScore(int newScore)
@@ -35,6 +43,7 @@ public class GameController : MonoBehaviour {
     void UpdateIngredients()
     {
         ingredientText.text = "Ingredients: " + ingredients;
+        PlayerPrefs.SetInt("Ingredients", ingredients);
     }
 
     public void AddIngredient(int newingredients)
