@@ -12882,6 +12882,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b263dbcb51eed974592e28c53be1ac85, type: 3}
   m_IsPrefabParent: 0
+--- !u!224 &521220356 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224000013027978804, guid: 31ee56bdc9e846143995e351ba9ce14c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1519640246}
 --- !u!1001 &529907947
 Prefab:
   m_ObjectHideFlags: 0
@@ -31293,6 +31298,11 @@ Prefab:
       propertyPath: ingredientText
       value: 
       objectReference: {fileID: 831640455}
+    - target: {fileID: 114000011659972170, guid: 5f74b879d7912ec41b3bc1ed53479620,
+        type: 2}
+      propertyPath: panel
+      value: 
+      objectReference: {fileID: 521220356}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f74b879d7912ec41b3bc1ed53479620, type: 2}
   m_IsPrefabParent: 0
