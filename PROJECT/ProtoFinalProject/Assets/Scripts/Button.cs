@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Button : MonoBehaviour {
     //FIELDS
+    public Transform panel;
 
     //METHODS
     public void ExitGame()
@@ -24,5 +25,11 @@ public class Button : MonoBehaviour {
     public void loadLevel(int level)
     {
         SceneManager.LoadScene(level);
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
+        panel.gameObject.SetActive(false);
     }
 }
