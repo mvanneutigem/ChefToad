@@ -4,8 +4,9 @@ using System.Collections;
 public class Death : MonoBehaviour
 {
     public Transform TransSpawnpoint;
+    public Transform GameController;
     public int _toadLives = 2;
-    private int _lives;
+    public int _lives;
 
     void Start()
     {
@@ -18,6 +19,7 @@ public class Death : MonoBehaviour
         {
             GetComponent<Transform>().position = TransSpawnpoint.position;
             _lives = _toadLives;
+            GameController.GetComponent<GameController>().LifeDown();
         }
         Debug.Log("Lives:" + _lives);
     }

@@ -7,9 +7,14 @@ public class GameController : MonoBehaviour {
     //FIELDS
     public Text scoreText;
     public Text ingredientText;
+    public Text LivesText;
+    public Text ToadalLivesText;
+    public Transform Player;
     public bool ScoreScreen = false;
+    public int _toadalLives;
     private int score;
     private int ingredients;
+    private int lives;
     //METHODS
 
 	// Use this for initialization
@@ -27,7 +32,16 @@ public class GameController : MonoBehaviour {
             ingredients = PlayerPrefs.GetInt("Ingredients");
             UpdateIngredients();
         }
-	}
+        lives = Player.GetComponent<Death>()._lives;
+        LivesText.text = "Lives: " + lives;
+        if (score == 10)
+        {
+            _toadalLives++;
+        }
+        ToadalLivesText.text = "ToadalLives: " + _toadalLives;
+
+        PlayerPrefs.SetInt("ToadalLives", _toadalLives);
+    }
 
     void UpdateScore()
     {
@@ -50,5 +64,10 @@ public class GameController : MonoBehaviour {
     {
         ingredients += newingredients;
         UpdateIngredients();
+    }
+
+    public void LifeDown()
+    {
+        _toadalLives--;
     }
 }
