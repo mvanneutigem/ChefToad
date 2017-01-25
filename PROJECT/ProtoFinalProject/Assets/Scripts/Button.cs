@@ -32,4 +32,11 @@ public class Button : MonoBehaviour {
         Time.timeScale = 1;
         panel.gameObject.SetActive(false);
     }
+
+    public void RestartLevel()
+    {
+        int sceneIndex = PlayerPrefs.GetInt("PreviousScene");
+        Debug.Log(sceneIndex);
+        SceneManager.LoadScene(sceneIndex);
+    }
 }

@@ -19,3 +19,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu_Levels.unity
   - enabled: 1
     path: Assets/Scenes/Transition.unity
+  - enabled: 1
+    path: Assets/Scenes/Menu_deathscreen.unity

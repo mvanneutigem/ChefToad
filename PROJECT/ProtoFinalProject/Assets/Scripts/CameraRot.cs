@@ -44,7 +44,6 @@ public class CameraRot : MonoBehaviour {
         var camforward = Vector3.Scale(transform.forward, new Vector3(1, 0, 1)).normalized;
         //making sure angle gets minus when below 0
 	    float angleBetween = Vector3.Angle(camforward, transform.forward) * (playerpos.y - camerapos.y > 0 ? -1 : 1);
-        Debug.Log(angleBetween);
         float newAngle = Mathf.Clamp(angleBetween + vRotation, -_angleMax, _angleMax);
 	    vRotation = newAngle - angleBetween;
 

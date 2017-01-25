@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
@@ -72,5 +73,12 @@ public class GameController : MonoBehaviour {
     {
         _toadalLives--;
         UpdateScore();
+        if (_toadalLives == 0)
+        {
+            int prevLevel = SceneManager.GetActiveScene().buildIndex;
+            PlayerPrefs.SetInt("PreviousScene", prevLevel);
+            Debug.Log(prevLevel);
+            SceneManager.LoadScene(7);
+        }
     }
 }
