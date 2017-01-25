@@ -73,6 +73,7 @@ public class GameController : MonoBehaviour {
     {
         _toadalLives--;
         UpdateScore();
+        //deathscrene link
         if (_toadalLives == 0)
         {
             int prevLevel = SceneManager.GetActiveScene().buildIndex;
