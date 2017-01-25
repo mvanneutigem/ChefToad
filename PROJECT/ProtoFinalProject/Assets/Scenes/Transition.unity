@@ -417,12 +417,12 @@ Prefab:
     - target: {fileID: 114000011642314868, guid: 31ee56bdc9e846143995e351ba9ce14c,
         type: 2}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.43382353
       objectReference: {fileID: 0}
     - target: {fileID: 114000011642314868, guid: 31ee56bdc9e846143995e351ba9ce14c,
         type: 2}
       propertyPath: m_Color.g
-      value: 0
+      value: 0.7735294
       objectReference: {fileID: 0}
     - target: {fileID: 224000010668684822, guid: 31ee56bdc9e846143995e351ba9ce14c,
         type: 2}
@@ -474,6 +474,17 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011642314868, guid: 31ee56bdc9e846143995e351ba9ce14c,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010662608624, guid: 31ee56bdc9e846143995e351ba9ce14c,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 2a80bcd0550901741ade078ef2cb0d47,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31ee56bdc9e846143995e351ba9ce14c, type: 2}
   m_IsPrefabParent: 0
