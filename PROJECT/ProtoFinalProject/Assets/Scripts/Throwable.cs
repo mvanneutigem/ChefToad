@@ -6,6 +6,7 @@ public class Throwable : MonoBehaviour {
     public Transform SpawnPoint;
     public Transform Player;
     public Transform Self;
+    public Transform Arch;
     public float _carryHight = 0.2f;
     public int _throwStrength = 500;
     private bool _carying = false;
@@ -33,11 +34,9 @@ public class Throwable : MonoBehaviour {
             _previous = transform.position;
             Self.position = _position;
             if (Input.GetButtonDown("Fire1"))
-            //if (Input.GetKeyDown("e"))
             {
                 _carying = false;
                 Self.GetComponent<Rigidbody>().isKinematic = false;
-                //Self.GetComponent<SphereCollider>().isTrigger = false;
                 Self.GetComponent<Rigidbody>().AddForce(Player.forward*(_throwStrength + _velocity*10));
                 if(_velocity > 0)
                 {
@@ -57,9 +56,9 @@ public class Throwable : MonoBehaviour {
         if (other == Player.GetComponent<Collider>())
         {
             if (Input.GetButtonUp("Fire1"))
-            // if (Input.GetKeyUp("e"))
             {
                 _carying = true;
+                Arch.GetComponent<MeshRenderer>().enabled = true;
             }
         }
 
@@ -75,8 +74,7 @@ public class Throwable : MonoBehaviour {
         {
             StartCoroutine(Respawn());
             GetComponent<MeshRenderer>().enabled = false;
-            //Self.position = SpawnPoint.position;
-            //Self.GetComponent<Rigidbody>().isKinematic = true;
+            Arch.GetComponent<MeshRenderer>().enabled = false;
         }
 
         if(other.tag == "InvisibleWall")
