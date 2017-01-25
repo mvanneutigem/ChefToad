@@ -34,6 +34,7 @@ public class Death : MonoBehaviour
         {
             GetComponent<Transform>().position = TransSpawnpoint.position;
             _lives = _toadLives;
+            GameController.GetComponent<GameController>().LifeDown();
         }
     }
 }
