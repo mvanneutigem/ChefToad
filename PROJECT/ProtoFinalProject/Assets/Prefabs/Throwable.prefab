@@ -110,7 +110,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   Self: {fileID: 4000012801045568}
   _carryHight: 1
-  _throwStrength: 200
+  _throwStrength: 100
 --- !u!135 &135000011392989528
 SphereCollider:
   m_ObjectHideFlags: 1
