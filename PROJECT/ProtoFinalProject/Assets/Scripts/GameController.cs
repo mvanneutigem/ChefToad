@@ -41,7 +41,7 @@ public class GameController : MonoBehaviour {
             score = 0;
             UpdateScore();
         }
-        ToadalLivesText.text = "ToadalLives: " + _toadalLives;
+        ToadalLivesText.text = "X" + _toadalLives;
 
         PlayerPrefs.SetInt("ToadalLives", _toadalLives);
     }

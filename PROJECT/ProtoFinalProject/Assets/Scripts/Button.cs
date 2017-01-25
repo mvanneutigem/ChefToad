@@ -40,4 +40,10 @@ public class Button : MonoBehaviour {
         Debug.Log(sceneIndex);
         SceneManager.LoadScene(sceneIndex);
     }
+
+    public void NextLevel()
+    {
+        int sceneIndex = PlayerPrefs.GetInt("PreviousScene");
+        SceneManager.LoadScene(sceneIndex + 1);
+    }
 }
