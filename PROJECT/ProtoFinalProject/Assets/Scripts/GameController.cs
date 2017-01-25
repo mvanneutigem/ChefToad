@@ -37,6 +37,8 @@ public class GameController : MonoBehaviour {
         if (score == 10)
         {
             _toadalLives++;
+            score = 0;
+            UpdateScore();
         }
         ToadalLivesText.text = "ToadalLives: " + _toadalLives;
 
@@ -69,5 +71,6 @@ public class GameController : MonoBehaviour {
     public void LifeDown()
     {
         _toadalLives--;
+        UpdateScore();
     }
 }

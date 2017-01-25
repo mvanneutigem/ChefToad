@@ -21,7 +21,6 @@ public class Death : MonoBehaviour
             _lives = _toadLives;
             GameController.GetComponent<GameController>().LifeDown();
         }
-        Debug.Log("Lives:" + _lives);
     }
 
     void OnTriggerEnter(Collider other)
