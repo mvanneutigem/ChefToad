@@ -27,11 +27,19 @@ public class Platform : MonoBehaviour
         }
         else
         {
-            _counter -= Time.deltaTime;
-            if (_counter <= 0)
+            if (_currentWaypoint !=0 && WayPoints[_currentWaypoint-1].tag == "Smooth")
             {
-                _counter = 1.0f;
                 _wait = false;
+            }
+            else
+            {
+
+                _counter -= Time.deltaTime;
+                if (_counter <= 0)
+                {
+                    _counter = 1.0f;
+                    _wait = false;
+                }
             }
         }
         
