@@ -37,13 +37,14 @@ public class Button : MonoBehaviour {
     public void RestartLevel()
     {
         int sceneIndex = PlayerPrefs.GetInt("PreviousScene");
-        Debug.Log(sceneIndex);
+       // Debug.Log(sceneIndex);
         SceneManager.LoadScene(sceneIndex);
     }
 
     public void NextLevel()
     {
-        int sceneIndex = PlayerPrefs.GetInt("PreviousScene");
-        SceneManager.LoadScene(sceneIndex + 1);
+        int sceneIndex = PlayerPrefs.GetInt("NextScene");
+        // Debug.Log(sceneIndex);
+        SceneManager.LoadScene(sceneIndex);
     }
 }

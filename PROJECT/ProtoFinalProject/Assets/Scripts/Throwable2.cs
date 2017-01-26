@@ -35,6 +35,7 @@ public class Throwable2 : MonoBehaviour {
                 transform.GetComponent<Rigidbody>().isKinematic = false;
                 transform.GetComponent<Rigidbody>().AddForce(Toad.forward * (_throwStrength + _velocity));
                 transform.GetComponent<Rigidbody>().AddForce(0, 100, 0);
+                Arch.GetComponent<MeshRenderer>().enabled = false;
             }
         }
 
@@ -55,7 +56,7 @@ public class Throwable2 : MonoBehaviour {
         {
             transform.position = Spawn.position;
             transform.GetComponent<Rigidbody>().isKinematic = true;
-            Arch.GetComponent<MeshRenderer>().enabled = false;
+            //Arch.GetComponent<MeshRenderer>().enabled = false;
         }
     }
 }
