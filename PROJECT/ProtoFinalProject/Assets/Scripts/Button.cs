@@ -15,7 +15,7 @@ public class Button : MonoBehaviour {
     public void startGame()
     {
         //set first scene
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 
     public void LevelsMenu()
