@@ -26,12 +26,17 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	if(ScoreScreen)
+        if (ScoreScreen)
         {
             score = PlayerPrefs.GetInt("Score");
             UpdateScore();
             ingredients = PlayerPrefs.GetInt("Ingredients");
             UpdateIngredients();
+        }
+        else
+        {
+            int nextLevel = SceneManager.GetActiveScene().buildIndex + 1;
+            PlayerPrefs.SetInt("NextScene", nextLevel);
         }
         lives = Player.GetComponent<Death>()._lives;
         LivesText.text = "Lives: " + lives;
