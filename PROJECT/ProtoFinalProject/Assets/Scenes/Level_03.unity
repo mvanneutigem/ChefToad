@@ -13077,13 +13077,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114000012539342174, guid: b86a4b90e9450904a8f80138b2e0dea3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: SpawnPoint
       value: 
       objectReference: {fileID: 1641085307}
-    - target: {fileID: 114000012539342174, guid: b86a4b90e9450904a8f80138b2e0dea3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Player
       value: 
       objectReference: {fileID: 151187730}
@@ -13100,8 +13098,7 @@ Prefab:
       propertyPath: m_Name
       value: Sprout (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 114000012539342174, guid: b86a4b90e9450904a8f80138b2e0dea3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Arch
       value: 
       objectReference: {fileID: 1950675314}
@@ -30173,13 +30170,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114000012539342174, guid: b86a4b90e9450904a8f80138b2e0dea3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: SpawnPoint
       value: 
       objectReference: {fileID: 379261326}
-    - target: {fileID: 114000012539342174, guid: b86a4b90e9450904a8f80138b2e0dea3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Player
       value: 
       objectReference: {fileID: 151187730}
@@ -30196,8 +30191,7 @@ Prefab:
       propertyPath: m_Name
       value: Sprout (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 114000012539342174, guid: b86a4b90e9450904a8f80138b2e0dea3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Arch
       value: 
       objectReference: {fileID: 1950675314}
@@ -33934,13 +33928,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114000012539342174, guid: b86a4b90e9450904a8f80138b2e0dea3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: SpawnPoint
       value: 
       objectReference: {fileID: 1742430539}
-    - target: {fileID: 114000012539342174, guid: b86a4b90e9450904a8f80138b2e0dea3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Player
       value: 
       objectReference: {fileID: 151187730}
@@ -33957,8 +33949,7 @@ Prefab:
       propertyPath: m_Name
       value: Sprout (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 114000012539342174, guid: b86a4b90e9450904a8f80138b2e0dea3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Arch
       value: 
       objectReference: {fileID: 1950675314}
@@ -37408,26 +37399,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 985390835}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &985587092 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000010963823900, guid: b86a4b90e9450904a8f80138b2e0dea3,
-    type: 2}
-  m_PrefabInternal: {fileID: 1662260859}
---- !u!114 &985587093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 985587092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e56ad9eb08e1d34692955a727bd512a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Toad: {fileID: 151187730}
-  Arch: {fileID: 1950675314}
-  Spawn: {fileID: 928658765}
-  _carryHeight: 0.3
 --- !u!1 &986022732
 GameObject:
   m_ObjectHideFlags: 0
@@ -62155,13 +62126,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114000012539342174, guid: b86a4b90e9450904a8f80138b2e0dea3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: SpawnPoint
       value: 
       objectReference: {fileID: 593677834}
-    - target: {fileID: 114000012539342174, guid: b86a4b90e9450904a8f80138b2e0dea3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Player
       value: 
       objectReference: {fileID: 151187730}
@@ -62178,8 +62147,7 @@ Prefab:
       propertyPath: m_Name
       value: Sprout (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 114000012539342174, guid: b86a4b90e9450904a8f80138b2e0dea3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Arch
       value: 
       objectReference: {fileID: 1950675314}
@@ -65391,41 +65359,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114000012539342174, guid: b86a4b90e9450904a8f80138b2e0dea3,
+    - target: {fileID: 114000013397186868, guid: b86a4b90e9450904a8f80138b2e0dea3,
         type: 2}
-      propertyPath: SpawnPoint
-      value: 
-      objectReference: {fileID: 928658765}
-    - target: {fileID: 114000012539342174, guid: b86a4b90e9450904a8f80138b2e0dea3,
-        type: 2}
-      propertyPath: Player
+      propertyPath: Toad
       value: 
       objectReference: {fileID: 151187730}
-    - target: {fileID: 1000010963823900, guid: b86a4b90e9450904a8f80138b2e0dea3, type: 2}
-      propertyPath: m_TagString
-      value: Throwable
-      objectReference: {fileID: 0}
-    - target: {fileID: 23000010243658292, guid: b86a4b90e9450904a8f80138b2e0dea3,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 22c0e3e4e06c5ab4886b5c52e62c9ddb, type: 2}
-    - target: {fileID: 1000010963823900, guid: b86a4b90e9450904a8f80138b2e0dea3, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012539342174, guid: b86a4b90e9450904a8f80138b2e0dea3,
+    - target: {fileID: 114000013397186868, guid: b86a4b90e9450904a8f80138b2e0dea3,
         type: 2}
       propertyPath: Arch
       value: 
       objectReference: {fileID: 1950675314}
-    - target: {fileID: 54000012479527642, guid: b86a4b90e9450904a8f80138b2e0dea3,
+    - target: {fileID: 114000013397186868, guid: b86a4b90e9450904a8f80138b2e0dea3,
         type: 2}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114000012539342174, guid: b86a4b90e9450904a8f80138b2e0dea3, type: 2}
+      propertyPath: Spawn
+      value: 
+      objectReference: {fileID: 928658765}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b86a4b90e9450904a8f80138b2e0dea3, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1662808290 stripped
