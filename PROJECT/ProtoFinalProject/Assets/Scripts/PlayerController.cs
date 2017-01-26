@@ -22,6 +22,10 @@ public class PlayerController : MonoBehaviour
     private bool _onslope = false;
     private Collider _slope;
     Vector3 _ladderDir;
+    private int _lives = 2;
+    private int _prevlives = 2;
+    private bool _falling = false;
+    private bool _stopFallMovement = false;
 
     //METHODS
     void Awake()
@@ -33,16 +37,18 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
+        _lives = GetComponent<Death>()._lives;
         //input
         float hInput = Input.GetAxisRaw("Horizontal");
         float vInput = Input.GetAxisRaw("Vertical");
 
+        //scale camera forward to only have x and z axis to prevent character from angle-ing upwards/downwards
+        var camforward = Vector3.Scale(mainCamera.transform.forward, new Vector3(1, 0, 1)).normalized;
         //movement when falling/ climbing... or not...
         //if (_characterController.isGrounded)
         {
 
-            //scale camera forward to only have x and z axis to prevent character from angle-ing upwards/downwards
-            var camforward = Vector3.Scale(mainCamera.transform.forward, new Vector3(1, 0, 1)).normalized;
+
             
             //set the movevector, relative to the camera direction
             _moveVector = (vInput * camforward + hInput * mainCamera.transform.right);
@@ -82,34 +88,53 @@ public class PlayerController : MonoBehaviour
             var left = -_slope.GetComponent<Transform>().right;
             _moveVector += left * _slidespeed;
         }
+        
+
+        //animations
+        if (_prevlives != _lives && _prevlives == 2 && _lives ==1)
+        {
+            StartCoroutine(playanimation());
+            _falling = true;
+        }
+        if (!_falling)
+        {
+            if (Mathf.Abs(hInput) > 0 || Mathf.Abs(vInput) > 0)
+            {
+                if (_onLadder)
+                {
+                    //play climb
+                    Toad.GetComponent<Animation>().Play("climb");
+                }
+                else
+                {
+                    //play walk
+                    Toad.GetComponent<Animation>().Play("walk");
+                }
+            }
+            else
+            {
+                //play idle
+                Toad.GetComponent<Animation>().Play("idle");
+            }
+        }
+
+        if (_falling && !_stopFallMovement)
+        {
+            _moveVector = (-transform.forward);
+
+            //set the speed
+            _moveVector =  2 * _moveVector.normalized;
+        }
+
         //Gravity
         _moveVector += Physics.gravity;// * Time.deltaTime;//makes it fall too darn slowly
 
         //pass movement to char controller
         _characterController.Move(_moveVector * Time.deltaTime);
 
-        //animations
-        if (Mathf.Abs(hInput) > 0 || Mathf.Abs(vInput) > 0)
-        {
-            if (_onLadder)
-            {
-                //play climb
-                Toad.GetComponent<Animation>().Play("climb");
-            }
-            else
-            {
-                //play walk
-                Toad.GetComponent<Animation>().Play("walk");
-            }
-        }
-        else
-        {
-            //play idle
-            Toad.GetComponent<Animation>().Play("idle");
-        }
-
         _onLadder = false;
         _onslope = false;
+        _prevlives = GetComponent<Death>()._lives;
     }
 
     void OnTriggerStay(Collider other)
@@ -142,4 +167,14 @@ public class PlayerController : MonoBehaviour
         Physics.gravity = new Vector3 ( 0, -9.81f,0);
     }
 
+    private IEnumerator playanimation()
+    {
+        Toad.GetComponent<Animation>()["Fall"].time = 0;
+        Toad.GetComponent<Animation>().Play("Fall");
+        yield return new WaitForSeconds(0.5f);
+        _stopFallMovement = true;
+        yield return new WaitForSeconds(0.5f);
+        _stopFallMovement = false;
+        _falling = false;
+    }
 }

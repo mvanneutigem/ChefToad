@@ -72,6 +72,7 @@ ModelImporter:
     7400000: idle
     7400002: walk
     7400004: climb
+    7400006: Fall
     9500000: //RootNode
     11100000: //RootNode
     13700000: Mesh_Toad
@@ -350,6 +351,94 @@ ModelImporter:
       - path: Spine01_Jnt/Spine02_Jnt/Spine03_Jnt/Spine04_Jnt/R_Clav/R_Shoulder/R_Elbow/R_Wrist
         weight: 1
       - path: Spine01_Jnt/Spine02_Jnt/Spine03_Jnt/Spine04_Jnt/R_Clav/R_Shoulder/R_Elbow/R_Wrist/R_Hand
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Fall
+      takeName: Take 001
+      firstFrame: 114
+      lastFrame: 140
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Mesh_Toad
+        weight: 1
+      - path: Spine01_Jnt
+        weight: 1
+      - path: Spine01_Jnt/L_Hip
+        weight: 1
+      - path: Spine01_Jnt/L_Hip/L_Ankle
+        weight: 1
+      - path: Spine01_Jnt/L_Hip/L_Ankle/L_Foot
+        weight: 1
+      - path: Spine01_Jnt/L_Hip/L_Ankle/L_Foot/L_Toe
+        weight: 1
+      - path: Spine01_Jnt/R_Hip
+        weight: 1
+      - path: Spine01_Jnt/R_Hip/R_Ankle
+        weight: 1
+      - path: Spine01_Jnt/R_Hip/R_Ankle/R_Foot
+        weight: 1
+      - path: Spine01_Jnt/R_Hip/R_Ankle/R_Foot/R_Toe
+        weight: 1
+      - path: Spine01_Jnt/Spine02_Jnt
+        weight: 1
+      - path: Spine01_Jnt/Spine02_Jnt/Spine03_Jnt
+        weight: 1
+      - path: Spine01_Jnt/Spine02_Jnt/Spine03_Jnt/Spine04_Jnt
+        weight: 1
+      - path: Spine01_Jnt/Spine02_Jnt/Spine03_Jnt/Spine04_Jnt/L_Clav
+        weight: 1
+      - path: Spine01_Jnt/Spine02_Jnt/Spine03_Jnt/Spine04_Jnt/L_Clav/L_Shoulder
+        weight: 1
+      - path: Spine01_Jnt/Spine02_Jnt/Spine03_Jnt/Spine04_Jnt/L_Clav/L_Shoulder/L_Elbow
+        weight: 1
+      - path: Spine01_Jnt/Spine02_Jnt/Spine03_Jnt/Spine04_Jnt/L_Clav/L_Shoulder/L_Elbow/L_Wrist
+        weight: 1
+      - path: Spine01_Jnt/Spine02_Jnt/Spine03_Jnt/Spine04_Jnt/L_Clav/L_Shoulder/L_Elbow/L_Wrist/L_Hand
+        weight: 1
+      - path: Spine01_Jnt/Spine02_Jnt/Spine03_Jnt/Spine04_Jnt/Neck01
+        weight: 1
+      - path: Spine01_Jnt/Spine02_Jnt/Spine03_Jnt/Spine04_Jnt/Neck01/Neck02
+        weight: 1
+      - path: Spine01_Jnt/Spine02_Jnt/Spine03_Jnt/Spine04_Jnt/Neck01/Neck02/Head
+        weight: 1
+      - path: Spine01_Jnt/Spine02_Jnt/Spine03_Jnt/Spine04_Jnt/Neck01/Neck02/Head/Hat_Base
+        weight: 1
+      - path: Spine01_Jnt/Spine02_Jnt/Spine03_Jnt/Spine04_Jnt/Neck01/Neck02/Head/Hat_Base/Hat_Tip
+        weight: 1
+      - path: Spine01_Jnt/Spine02_Jnt/Spine03_Jnt/Spine04_Jnt/R_Clav
+        weight: 1
+      - path: Spine01_Jnt/Spine02_Jnt/Spine03_Jnt/Spine04_Jnt/R_Clav/R_Shoulder
+        weight: 1
+      - path: Spine01_Jnt/Spine02_Jnt/Spine03_Jnt/Spine04_Jnt/R_Clav/R_Shoulder/R_Elbow
+        weight: 1
+      - path: Spine01_Jnt/Spine02_Jnt/Spine03_Jnt/Spine04_Jnt/R_Clav/R_Shoulder/R_Elbow/R_Wrist
+        weight: 1
+      - path: Spine01_Jnt/Spine02_Jnt/Spine03_Jnt/Spine04_Jnt/R_Clav/R_Shoulder/R_Elbow/R_Wrist/R_Hand
+        weight: 1
+      - path: Toad
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
