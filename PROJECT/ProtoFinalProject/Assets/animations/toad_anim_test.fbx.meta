@@ -34,6 +34,7 @@ ModelImporter:
     100052: Spine03_Jnt
     100054: Spine04_Jnt
     100056: //RootNode
+    100058: Toad
     400000: Hat_Base
     400002: Hat_Tip
     400004: Head
@@ -63,7 +64,11 @@ ModelImporter:
     400052: Spine03_Jnt
     400054: Spine04_Jnt
     400056: //RootNode
+    400058: Toad
+    2300000: Toad
+    3300000: Toad
     4300000: Mesh_Toad
+    4300002: Toad
     7400000: idle
     7400002: walk
     7400004: climb
