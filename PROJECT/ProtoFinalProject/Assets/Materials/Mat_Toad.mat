@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Mat_Toad
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _EMISSION _EMISSIVE
+  m_ShaderKeywords: _EMISSION _EMISSIVE _METALLICGLOSSMAP
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -48,13 +48,13 @@ Material:
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 96820da8215ea72438a0a5b4519eb46c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _MetallicGlossMap
       second:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: f204adda6019ec248bc6970069073247, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -133,7 +133,7 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 1, g: 0.014705896, b: 0.014705896, a: 0}
+      second: {r: 1, g: 1, b: 1, a: 0}
     - first:
         name: _Color1
       second: {r: 0.77647066, g: 0.76857346, b: 0.4901961, a: 1}
