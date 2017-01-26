@@ -15,6 +15,10 @@ public class Throwable2 : MonoBehaviour {
     private Vector3 _position;
     private Vector3 _previous;
 
+    void Start()
+    {
+        Arch.GetComponent<MeshRenderer>().enabled = false;
+    }
     void Update ()
     {
         _velocity = (40 * (transform.position - _previous).magnitude) / Time.deltaTime;
