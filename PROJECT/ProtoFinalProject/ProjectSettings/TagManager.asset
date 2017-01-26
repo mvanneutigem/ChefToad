@@ -12,6 +12,8 @@ TagManager:
   - GameController
   - InvisibleWall
   - Water
+  - Stop
+  - Smooth
   layers:
   - Default
   - TransparentFX
