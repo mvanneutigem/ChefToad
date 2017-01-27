@@ -659,7 +659,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012368896884}
   m_LocalRotation: {x: -0, y: 0.000000014901161, z: -0, w: 1}
-  m_LocalPosition: {x: -5.5, y: 9.87, z: -7.52}
+  m_LocalPosition: {x: -9.39, y: -0.269, z: -9.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -999,6 +999,7 @@ Animation:
   - {fileID: 7400000, guid: 9907c881f3ebb5947895f48ac5ecdfec, type: 3}
   - {fileID: 7400002, guid: 9907c881f3ebb5947895f48ac5ecdfec, type: 3}
   - {fileID: 7400004, guid: 9907c881f3ebb5947895f48ac5ecdfec, type: 3}
+  - {fileID: 7400006, guid: 9907c881f3ebb5947895f48ac5ecdfec, type: 3}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -1045,7 +1046,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 48ac34d21cff81f46b1cb4dea0ad9e76, type: 2}
+  - {fileID: 2100000, guid: c0d6a71a50c91964d84043c09b1b9f1b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
