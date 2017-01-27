@@ -6631,7 +6631,7 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e667243de8827d94fa6c0a181ef0b939, type: 2}
+      objectReference: {fileID: 2100000, guid: 0d1f1adf0b76dba4cb6061c018f272bf, type: 2}
     - target: {fileID: 1000011171330324, guid: 14c3823817c5b36438a400d79fcc5266, type: 2}
       propertyPath: m_Name
       value: baguette_prefab (1)
@@ -47188,7 +47188,7 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e667243de8827d94fa6c0a181ef0b939, type: 2}
+      objectReference: {fileID: 2100000, guid: 0d1f1adf0b76dba4cb6061c018f272bf, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14c3823817c5b36438a400d79fcc5266, type: 2}
   m_IsPrefabParent: 0
