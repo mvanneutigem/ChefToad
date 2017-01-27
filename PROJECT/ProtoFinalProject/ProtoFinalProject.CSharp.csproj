@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Death.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\Ingredient.cs" />
+    <Compile Include="Assets\Scripts\IngredientsUI.cs" />
     <Compile Include="Assets\Scripts\LevelComplete.cs" />
     <Compile Include="Assets\Scripts\Parent.cs" />
     <Compile Include="Assets\Scripts\Patrol.cs" />
