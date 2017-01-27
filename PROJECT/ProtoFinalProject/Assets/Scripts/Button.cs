@@ -15,16 +15,19 @@ public class Button : MonoBehaviour {
     public void startGame()
     {
         //set first scene
+        Time.timeScale = 1;
         SceneManager.LoadScene(1);
     }
 
     public void LevelsMenu()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(5);
     }
 
     public void loadLevel(int level)
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(level);
     }
 
@@ -36,6 +39,7 @@ public class Button : MonoBehaviour {
 
     public void RestartLevel()
     {
+        Time.timeScale = 1;
         int sceneIndex = PlayerPrefs.GetInt("PreviousScene");
        // Debug.Log(sceneIndex);
         SceneManager.LoadScene(sceneIndex);
@@ -43,6 +47,7 @@ public class Button : MonoBehaviour {
 
     public void NextLevel()
     {
+        Time.timeScale = 1;
         int sceneIndex = PlayerPrefs.GetInt("NextScene");
         // Debug.Log(sceneIndex);
         SceneManager.LoadScene(sceneIndex);
