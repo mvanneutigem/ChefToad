@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: b4928e691d80ad948bf5a3f2cb287176
-timeCreated: 1481281825
+guid: 88578f2c68521f14ab914dd01620bd05
+timeCreated: 1485517929
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,10 +9,9 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: mesh_BuildingBlock5SideChamfer
-    4300002: BuildingBlock5SideChamfer
+    4300000: Tomato
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:

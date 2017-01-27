@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 61c993bede3ccc24b8ebe8752214656d
-timeCreated: 1481281825
+guid: 4fdffd71e2ed5b143ace09894ad3c91b
+timeCreated: 1485517929
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,9 +9,9 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: BuildingBlock_2sideChamfer
+    4300000: Chicken
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:

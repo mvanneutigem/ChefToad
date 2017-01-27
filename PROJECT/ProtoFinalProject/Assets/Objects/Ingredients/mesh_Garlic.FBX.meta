@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: e50980d248b7aa04bbb75e79d8080044
-timeCreated: 1482336752
+guid: 36f790f6240586c4bb382c6bd9c324d6
+timeCreated: 1485517929
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: BuildingBlock_1sideChamfer
+    4300000: Garlic
   materials:
     importMaterials: 0
     materialName: 0
