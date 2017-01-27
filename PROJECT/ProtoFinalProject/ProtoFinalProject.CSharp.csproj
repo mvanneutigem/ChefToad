@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\PickUp.cs" />
     <Compile Include="Assets\Scripts\Platform.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\SpaghettiCurtain.cs" />
     <Compile Include="Assets\Scripts\Throwable.cs" />
     <Compile Include="Assets\Scripts\Throwable2.cs" />
     <Compile Include="Assets\Scripts\Transform_Button.cs" />
