@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 5c927d6cbbc1368458a0f1df9814e758
-timeCreated: 1481318630
+guid: 5a446d34961dc784692edf354f6f9991
+timeCreated: 1485555712
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -25,12 +25,10 @@ ModelImporter:
     100034: joint7
     100036: joint8
     100038: joint9
-    100040: left
-    100042: Sushiroll
-    100044: //RootNode
-    100046: SushiRoll
-    100048: SushiRoll_MeshPart0
-    100050: SushiRoll_MeshPart1
+    100040: SushiRoll
+    100042: SushiRoll_MeshPart0
+    100044: SushiRoll_MeshPart1
+    100046: //RootNode
     400000: joint1
     400002: joint10
     400004: joint11
@@ -51,21 +49,17 @@ ModelImporter:
     400034: joint7
     400036: joint8
     400038: joint9
-    400040: left
-    400042: Sushiroll
-    400044: //RootNode
-    400046: SushiRoll
-    400048: SushiRoll_MeshPart0
-    400050: SushiRoll_MeshPart1
-    4300000: Sushiroll
-    4300002: SushiRoll_MeshPart0
-    4300004: SushiRoll_MeshPart1
+    400040: SushiRoll
+    400042: SushiRoll_MeshPart0
+    400044: SushiRoll_MeshPart1
+    400046: //RootNode
+    4300000: SushiRoll_MeshPart0
+    4300002: SushiRoll_MeshPart1
     7400000: Take 001
     9500000: //RootNode
     11100000: //RootNode
-    13700000: Sushiroll
-    13700002: SushiRoll_MeshPart0
-    13700004: SushiRoll_MeshPart1
+    13700000: SushiRoll_MeshPart0
+    13700002: SushiRoll_MeshPart1
   materials:
     importMaterials: 1
     materialName: 0
@@ -154,9 +148,11 @@ ModelImporter:
         weight: 1
       - path: joint1/joint2/joint3/joint4/joint5/joint6/joint7/joint8/joint9/joint10/joint11/joint12/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20
         weight: 1
-      - path: left
+      - path: SushiRoll
         weight: 1
-      - path: Sushiroll
+      - path: SushiRoll/SushiRoll_MeshPart0
+        weight: 1
+      - path: SushiRoll/SushiRoll_MeshPart1
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
