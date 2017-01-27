@@ -99,7 +99,7 @@ public class IngredientsUI : MonoBehaviour
                 }
                 break;
             case 4:
-                Image im4 = I1.transform.GetChild(ingredientIndex).GetComponent<Image>();
+                Image im4 = I1.transform.GetChild(ingredientIndex-2).GetComponent<Image>();
                 switch (ingredientIndex)
                 {
                     case 1:
