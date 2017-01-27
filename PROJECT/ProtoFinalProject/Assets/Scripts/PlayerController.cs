@@ -111,6 +111,12 @@ public class PlayerController : MonoBehaviour
                     Toad.GetComponent<Animation>().Play("walk");
                 }
             }
+            else if (_onLadder)
+            {
+                //play climb
+                Toad.GetComponent<Animation>()["climb"].time = 0;
+                //Toad.GetComponent<Animation>().Play("climb");
+            }
             else
             {
                 //play idle
