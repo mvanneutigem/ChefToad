@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 9271dc51a400bbc41856606ef61ae25d
-timeCreated: 1481281825
+guid: 1801c5c1c821608478e3cb99d513e8b8
+timeCreated: 1485517929
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,9 +9,9 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: BuildingBlock_3sideChamfer
+    4300000: Soysauce
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:
