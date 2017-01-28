@@ -57,7 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 22c0e3e4e06c5ab4886b5c52e62c9ddb, type: 2}
+  - {fileID: 2100000, guid: 4b1d6b26bc75e504cbb281aaafaaa2fe, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -110,6 +110,7 @@ MonoBehaviour:
   Arch: {fileID: 0}
   Spawn: {fileID: 0}
   _carryHeight: 0.3
+  _respawnTime: 2
 --- !u!135 &135000011738434158
 SphereCollider:
   m_ObjectHideFlags: 1
