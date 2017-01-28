@@ -18136,7 +18136,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 8a4ebd4a36cdcff4496b6833261b0c46, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 38776b6c47f41da46992d946154b2433, type: 2}
+      objectReference: {fileID: 2100000, guid: 7649244f6d6bfb54abad12ae7db9b095, type: 2}
     - target: {fileID: 100000, guid: 8a4ebd4a36cdcff4496b6833261b0c46, type: 3}
       propertyPath: m_Name
       value: Chopstick (1)
@@ -37425,7 +37425,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 8a4ebd4a36cdcff4496b6833261b0c46, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 38776b6c47f41da46992d946154b2433, type: 2}
+      objectReference: {fileID: 2100000, guid: 7649244f6d6bfb54abad12ae7db9b095, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a4ebd4a36cdcff4496b6833261b0c46, type: 3}
   m_IsPrefabParent: 0
