@@ -10225,7 +10225,7 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 22c0e3e4e06c5ab4886b5c52e62c9ddb, type: 2}
+      objectReference: {fileID: 2100000, guid: 4b1d6b26bc75e504cbb281aaafaaa2fe, type: 2}
     - target: {fileID: 1000010963823900, guid: b86a4b90e9450904a8f80138b2e0dea3, type: 2}
       propertyPath: m_Name
       value: Sprout (2)
@@ -12211,6 +12211,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 23000012243115760, guid: 4fb25e02ab908eb41b42f395e8726dd5,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b62151c3be7094642877fa029fb06a55, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4fb25e02ab908eb41b42f395e8726dd5, type: 2}
   m_IsPrefabParent: 0
@@ -23761,7 +23766,7 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 22c0e3e4e06c5ab4886b5c52e62c9ddb, type: 2}
+      objectReference: {fileID: 2100000, guid: 4b1d6b26bc75e504cbb281aaafaaa2fe, type: 2}
     - target: {fileID: 1000010963823900, guid: b86a4b90e9450904a8f80138b2e0dea3, type: 2}
       propertyPath: m_Name
       value: Sprout (4)
@@ -27003,7 +27008,7 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 22c0e3e4e06c5ab4886b5c52e62c9ddb, type: 2}
+      objectReference: {fileID: 2100000, guid: 4b1d6b26bc75e504cbb281aaafaaa2fe, type: 2}
     - target: {fileID: 1000010963823900, guid: b86a4b90e9450904a8f80138b2e0dea3, type: 2}
       propertyPath: m_Name
       value: Sprout (3)
@@ -49589,7 +49594,7 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 22c0e3e4e06c5ab4886b5c52e62c9ddb, type: 2}
+      objectReference: {fileID: 2100000, guid: 4b1d6b26bc75e504cbb281aaafaaa2fe, type: 2}
     - target: {fileID: 1000010963823900, guid: b86a4b90e9450904a8f80138b2e0dea3, type: 2}
       propertyPath: m_Name
       value: Sprout (1)
