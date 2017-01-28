@@ -113,6 +113,7 @@ public class Patrol : MonoBehaviour
             {
                 TransSelf.localScale = new Vector3(2.0f, 1.0f, 2.0f);
             }
+            transform.GetComponent<AudioSource>().Play();
         }
     }
 

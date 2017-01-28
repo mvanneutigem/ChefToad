@@ -26,9 +26,11 @@ public class PickUp : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
+            GameObject Sound = GameObject.FindWithTag("SoundPickup");
+            Sound.GetComponent<AudioSource>().Play();
             _gameController.AddScore(Scorevalue);
             Destroy(gameObject);
-
+            
         }
     }
 }

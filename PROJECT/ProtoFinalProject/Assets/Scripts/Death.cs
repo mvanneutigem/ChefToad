@@ -5,6 +5,7 @@ public class Death : MonoBehaviour
 {
     public Transform TransSpawnpoint;
     public Transform GameController;
+    public GameObject SoundDamage;
     public int _toadLives = 2;
     public int _lives;
 
@@ -28,6 +29,7 @@ public class Death : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             _lives--;
+            transform.GetComponent<AudioSource>().Play();
         }
 
         if (other.gameObject.tag == "Water")
@@ -35,6 +37,7 @@ public class Death : MonoBehaviour
             GetComponent<Transform>().position = TransSpawnpoint.position;
             _lives = _toadLives;
             GameController.GetComponent<GameController>().LifeDown();
+            transform.GetComponent<AudioSource>().Play();
         }
     }
 }

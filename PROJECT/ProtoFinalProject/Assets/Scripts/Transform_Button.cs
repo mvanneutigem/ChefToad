@@ -291,8 +291,8 @@ public class Transform_Button : MonoBehaviour {
         if (other == Player.GetComponent<Collider>())
         {
             if (Input.GetButtonUp("Fire1"))
-            //if (Input.GetKeyUp("e"))
             {
+                transform.GetComponent<AudioSource>().Play();
                 if(_move == true)
                 {
                     _moveTriggered = true;
