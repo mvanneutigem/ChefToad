@@ -364,6 +364,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 82000014277365580, guid: 3445fee6e9c6456448567884223f1627,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 80d0ea36c79212d41b506a6fcd897da9, type: 3}
+    - target: {fileID: 82000014277365580, guid: 3445fee6e9c6456448567884223f1627,
+        type: 2}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82000014277365580, guid: 3445fee6e9c6456448567884223f1627,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 82000014277365580, guid: 3445fee6e9c6456448567884223f1627,
+        type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3445fee6e9c6456448567884223f1627, type: 2}
   m_IsPrefabParent: 0
@@ -743,7 +763,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &1770868040
 GameObject:
   m_ObjectHideFlags: 0
