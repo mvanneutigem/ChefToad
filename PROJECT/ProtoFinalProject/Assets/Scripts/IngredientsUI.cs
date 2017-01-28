@@ -101,8 +101,6 @@ public class IngredientsUI : MonoBehaviour
             case 4:
                 int index = (ingredientIndex + 2) % 4;
                 Image im4 = I1.transform.GetChild(index).GetComponent<Image>();
-                Debug.Log("Ingredient index:");
-                Debug.Log((ingredientIndex - 2) %4);
                 switch (ingredientIndex )
                 {
                     case 1:
