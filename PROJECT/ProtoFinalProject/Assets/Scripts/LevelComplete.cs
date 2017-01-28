@@ -8,6 +8,8 @@ public class LevelComplete : MonoBehaviour {
 
     void OnTriggerEnter(Collider col)
     {
-            SceneManager.LoadScene(_scene);
+        int prevLevel = SceneManager.GetActiveScene().buildIndex;
+        PlayerPrefs.SetInt("PreviousScene", prevLevel);
+        SceneManager.LoadScene(_scene);
     }
 }

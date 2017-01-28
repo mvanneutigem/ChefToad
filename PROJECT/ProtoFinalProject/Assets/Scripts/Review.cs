@@ -27,6 +27,7 @@ public class Review : MonoBehaviour
     {
         int ingredients = ingredients = PlayerPrefs.GetInt("Ingredients");
         int sceneIndex = PlayerPrefs.GetInt("PreviousScene");
+        Debug.Log(sceneIndex);
 
         IngredientsFoundText.text = ingredients + " Ingredients found!";
 
@@ -165,11 +166,11 @@ public class Review : MonoBehaviour
 
     private void setReviewStars(int amount, Image reviewer)
     {
-        Image im = reviewer.transform.GetChild(4).GetComponent<Image>();
-        Image im2 = reviewer.transform.GetChild(3).GetComponent<Image>();
+        Image im = reviewer.transform.GetChild(0).GetComponent<Image>();
+        Image im2 = reviewer.transform.GetChild(1).GetComponent<Image>();
         Image im3 = reviewer.transform.GetChild(2).GetComponent<Image>();
-        Image im4 = reviewer.transform.GetChild(1).GetComponent<Image>();
-        Image im5 = reviewer.transform.GetChild(0).GetComponent<Image>();
+        Image im4 = reviewer.transform.GetChild(3).GetComponent<Image>();
+        Image im5 = reviewer.transform.GetChild(4).GetComponent<Image>();
         im.sprite = StarSprite;
 
         if (amount > 1)
