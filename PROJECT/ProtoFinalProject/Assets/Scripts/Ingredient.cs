@@ -31,6 +31,8 @@ public class Ingredient : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            GameObject Sound = GameObject.FindWithTag("SoundIngredient");
+            Sound.GetComponent<AudioSource>().Play();
             _gameController.AddIngredient(Scorevalue);
             if (transform.tag == "1")
             {

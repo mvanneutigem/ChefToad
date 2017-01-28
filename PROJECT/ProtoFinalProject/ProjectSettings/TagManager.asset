@@ -19,6 +19,8 @@ TagManager:
   - 2
   - 3
   - 4
+  - SoundPickup
+  - SoundIngredient
   layers:
   - Default
   - TransparentFX
