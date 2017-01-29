@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     private int _prevlives = 2;
     private bool _falling = false;
     private bool _stopFallMovement = false;
+    public Material DirtyToadMaterial;
+    public Material cleanToadMaterial;
 
     //METHODS
     void Awake()
@@ -178,6 +180,10 @@ public class PlayerController : MonoBehaviour
         _onLadder = false;
         _onslope = false;
         _prevlives = GetComponent<Death>()._lives;
+        if (_lives == 0)
+        {
+            transform.GetChild(0).transform.GetChild(0).transform.GetComponent<Renderer>().material = cleanToadMaterial;
+        }
     }
 
     void OnTriggerStay(Collider other)
@@ -212,6 +218,7 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator playanimation()
     {
+        transform.GetChild(0).transform.GetChild(0).transform.GetComponent<Renderer>().material = DirtyToadMaterial;
         Toad.GetComponent<Animation>()["Fall"].time = 0;
         Toad.GetComponent<Animation>().Play("Fall");
         yield return new WaitForSeconds(0.5f);

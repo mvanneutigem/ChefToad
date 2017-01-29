@@ -33279,6 +33279,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010818530434, guid: 439219fc14f936749a10a14349accc51,
+        type: 2}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 498088685}
     - target: {fileID: 114000012309866388, guid: 439219fc14f936749a10a14349accc51,
         type: 2}
       propertyPath: TransSpawnpoint
@@ -33289,16 +33294,6 @@ Prefab:
       propertyPath: GameController
       value: 
       objectReference: {fileID: 1175345907}
-    - target: {fileID: 114000010818530434, guid: 439219fc14f936749a10a14349accc51,
-        type: 2}
-      propertyPath: mainCamera
-      value: 
-      objectReference: {fileID: 498088685}
-    - target: {fileID: 114000012309866388, guid: 439219fc14f936749a10a14349accc51,
-        type: 2}
-      propertyPath: _lives
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 439219fc14f936749a10a14349accc51, type: 2}
   m_IsPrefabParent: 0
