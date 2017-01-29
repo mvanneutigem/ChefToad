@@ -9780,25 +9780,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1000011010037964, guid: 31ee56bdc9e846143995e351ba9ce14c, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000011961435080, guid: 31ee56bdc9e846143995e351ba9ce14c,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000012380531000, guid: 31ee56bdc9e846143995e351ba9ce14c,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000010237268518, guid: 31ee56bdc9e846143995e351ba9ce14c,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31ee56bdc9e846143995e351ba9ce14c, type: 2}
   m_IsPrefabParent: 0
@@ -24743,12 +24724,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fa0b06e6521781a48bd0eafe7bde3a29, type: 3}
   m_IsPrefabParent: 0
---- !u!114 &831640455 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114000011161032466, guid: 31ee56bdc9e846143995e351ba9ce14c,
-    type: 2}
-  m_PrefabInternal: {fileID: 362623505}
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &833141192
 GameObject:
   m_ObjectHideFlags: 0
@@ -26336,7 +26311,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000010038826940, guid: 2cb022b059344874ca46829b2eacabf8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -6.921421
+      value: -6.31
       objectReference: {fileID: 0}
     - target: {fileID: 4000010038826940, guid: 2cb022b059344874ca46829b2eacabf8, type: 2}
       propertyPath: m_LocalPosition.y
@@ -33274,7 +33249,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000011696687500, guid: 439219fc14f936749a10a14349accc51, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -9.521
+      value: 5.82
       objectReference: {fileID: 0}
     - target: {fileID: 4000011696687500, guid: 439219fc14f936749a10a14349accc51, type: 2}
       propertyPath: m_LocalPosition.y
@@ -33282,7 +33257,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011696687500, guid: 439219fc14f936749a10a14349accc51, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -9.41
+      value: -2.71
       objectReference: {fileID: 0}
     - target: {fileID: 4000011696687500, guid: 439219fc14f936749a10a14349accc51, type: 2}
       propertyPath: m_LocalRotation.x
@@ -34479,7 +34454,7 @@ Prefab:
         type: 2}
       propertyPath: ingredientText
       value: 
-      objectReference: {fileID: 831640455}
+      objectReference: {fileID: 0}
     - target: {fileID: 114000011659972170, guid: 5f74b879d7912ec41b3bc1ed53479620,
         type: 2}
       propertyPath: panel
@@ -34489,7 +34464,7 @@ Prefab:
         type: 2}
       propertyPath: LivesText
       value: 
-      objectReference: {fileID: 1862590705}
+      objectReference: {fileID: 0}
     - target: {fileID: 114000011417830582, guid: 5f74b879d7912ec41b3bc1ed53479620,
         type: 2}
       propertyPath: ToadalLivesText
@@ -52979,12 +52954,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b263dbcb51eed974592e28c53be1ac85, type: 3}
   m_IsPrefabParent: 0
---- !u!114 &1862590705 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114000013346161084, guid: 31ee56bdc9e846143995e351ba9ce14c,
-    type: 2}
-  m_PrefabInternal: {fileID: 362623505}
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &1863213203
 GameObject:
   m_ObjectHideFlags: 0
@@ -55229,7 +55198,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010038826940, guid: 2cb022b059344874ca46829b2eacabf8, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 1.2209859
+      value: 1.67
       objectReference: {fileID: 0}
     - target: {fileID: 4000010038826940, guid: 2cb022b059344874ca46829b2eacabf8, type: 2}
       propertyPath: m_LocalRotation.x
