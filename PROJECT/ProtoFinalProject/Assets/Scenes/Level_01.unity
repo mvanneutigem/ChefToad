@@ -10733,12 +10733,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8444ca6d01cf68e4ea8d8de51e9fcef7, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &581434015 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114000011161032466, guid: 31ee56bdc9e846143995e351ba9ce14c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1829096791}
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &581965340
 Prefab:
   m_ObjectHideFlags: 0
@@ -10789,6 +10783,22 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b263dbcb51eed974592e28c53be1ac85, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &581999340 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: f722a2bb37bdac3489e11cd965cdffdc, type: 3}
+  m_PrefabInternal: {fileID: 1913820451}
+--- !u!65 &581999343
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 581999340}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 1, z: 0.3}
+  m_Center: {x: -0.0003565699, y: 0.41672298, z: 0.000032253563}
 --- !u!1001 &582598841
 Prefab:
   m_ObjectHideFlags: 0
@@ -26523,7 +26533,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.5, y: 1, z: 1.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1463015290
 MeshFilter:
@@ -30844,12 +30854,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b263dbcb51eed974592e28c53be1ac85, type: 3}
   m_IsPrefabParent: 0
---- !u!114 &1746773066 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114000013346161084, guid: 31ee56bdc9e846143995e351ba9ce14c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1829096791}
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &1748355223
 Prefab:
   m_ObjectHideFlags: 0
@@ -32167,6 +32171,10 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.x
       value: 86
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010529467456, guid: 31ee56bdc9e846143995e351ba9ce14c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31ee56bdc9e846143995e351ba9ce14c, type: 2}
@@ -34449,7 +34457,7 @@ Prefab:
         type: 2}
       propertyPath: ingredientText
       value: 
-      objectReference: {fileID: 581434015}
+      objectReference: {fileID: 0}
     - target: {fileID: 114000011659972170, guid: 5f74b879d7912ec41b3bc1ed53479620,
         type: 2}
       propertyPath: panel
@@ -34459,7 +34467,7 @@ Prefab:
         type: 2}
       propertyPath: LivesText
       value: 
-      objectReference: {fileID: 1746773066}
+      objectReference: {fileID: 0}
     - target: {fileID: 114000011417830582, guid: 5f74b879d7912ec41b3bc1ed53479620,
         type: 2}
       propertyPath: ToadalLivesText
