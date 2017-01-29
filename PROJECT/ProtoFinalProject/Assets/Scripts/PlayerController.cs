@@ -83,13 +83,25 @@ public class PlayerController : MonoBehaviour
             {
                 if (!_characterController.isGrounded)
                 {
-                    var direction = Vector3.Dot(inputVector, _ladderDir);
-                    _moveVector = Vector3.up * direction * _climbspeed;
-                    transform.rotation = Quaternion.LookRotation(_ladderDir);
-                    if (direction < 0)
+                    //for walking at ladder
+                    //var direction = Vector3.Dot(inputVector, _ladderDir);
+                    //_moveVector = Vector3.up * direction * _climbspeed;
+                    //transform.rotation = Quaternion.LookRotation(_ladderDir);
+
+                    if (vInput > 0)
                     {
-                        Toad.GetComponent<Animation>()["climb"].time = -1;
+                        _moveVector = Vector3.up * _climbspeed;
                     }
+                    else
+                    {
+                        _moveVector = Vector3.down * _climbspeed;
+                        Toad.GetComponent<Animation>()["climb"].time = -1;
+                        transform.rotation = Quaternion.LookRotation(_ladderDir);
+                    }
+                    //if (direction < 0)
+                    //{
+                    //    Toad.GetComponent<Animation>()["climb"].time = -1;
+                    //}
                 }
                 //if ((_ladderDir.x > 0 && vInput > 0 || _ladderDir.x < 0 && vInput < 0) && (_ladderDir.z > 0 && hInput > 0 || _ladderDir.z < 0 && hInput < 0))
                 //{
