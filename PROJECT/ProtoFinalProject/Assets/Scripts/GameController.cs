@@ -21,7 +21,7 @@ public class GameController : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        if (SceneManager.GetActiveScene().buildIndex != 1)
+        if (SceneManager.GetActiveScene().buildIndex != 2)
         {
             _toadalLives = PlayerPrefs.GetInt("ToadalLives");
             score = PlayerPrefs.GetInt("Score");
