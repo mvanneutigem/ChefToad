@@ -660,7 +660,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012368896884}
   m_LocalRotation: {x: -0, y: 0.000000014901161, z: -0, w: 1}
-  m_LocalPosition: {x: 7.99, y: 2.72, z: -6.97}
+  m_LocalPosition: {x: -9.82, y: -0, z: -9.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1093,6 +1093,8 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   Toad: {fileID: 1000010225209138}
   _speed: 5
+  DirtyToadMaterial: {fileID: 2100000, guid: ae4ab6a92120cf94490de8e94507d77e, type: 2}
+  cleanToadMaterial: {fileID: 2100000, guid: c0d6a71a50c91964d84043c09b1b9f1b, type: 2}
 --- !u!114 &114000012309866388
 MonoBehaviour:
   m_ObjectHideFlags: 1
