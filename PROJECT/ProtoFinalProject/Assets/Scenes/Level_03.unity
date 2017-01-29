@@ -42811,28 +42811,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1000010529467456, guid: 31ee56bdc9e846143995e351ba9ce14c, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010746818302, guid: 31ee56bdc9e846143995e351ba9ce14c,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 8b5ac957efa4e2445918f04e69c10d70,
-        type: 3}
-    - target: {fileID: 114000014200935086, guid: 31ee56bdc9e846143995e351ba9ce14c,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: f5ab0844286aee64e9ebe62393c78df2,
-        type: 3}
-    - target: {fileID: 114000010546343430, guid: 31ee56bdc9e846143995e351ba9ce14c,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: ed0d488957848f8458c954b5ab1165f6,
-        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31ee56bdc9e846143995e351ba9ce14c, type: 2}
   m_IsPrefabParent: 0
@@ -50394,12 +50372,12 @@ Transform:
   - {fileID: 1139309705}
   - {fileID: 1156321585}
   - {fileID: 294978748}
+  - {fileID: 114394508}
   - {fileID: 1339605699}
   - {fileID: 1740698367}
   - {fileID: 24273176}
   - {fileID: 1686386359}
   - {fileID: 1792229889}
-  - {fileID: 114394508}
   - {fileID: 77425667}
   - {fileID: 54536141}
   - {fileID: 1383233624}
