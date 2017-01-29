@@ -47,9 +47,6 @@ public class PlayerController : MonoBehaviour
         //movement when falling/ climbing... or not...
         //if (_characterController.isGrounded)
         {
-
-
-            
             //set the movevector, relative to the camera direction
             _moveVector = (vInput * camforward + hInput * mainCamera.transform.right);
 
@@ -76,10 +73,39 @@ public class PlayerController : MonoBehaviour
             Debug.Log("ladder movement active");
             Debug.Log(vInput);
 
-            if (_characterController.isGrounded && ( _ladderDir.x > 0 && vInput > 0 || _ladderDir.x < 0 && vInput < 0) || (_ladderDir.z > 0 && hInput > 0 || _ladderDir.z < 0 && hInput < 0) || !_characterController.isGrounded)
+            //if (_characterController.isGrounded && ( _ladderDir.x > 0 && vInput > 0 || _ladderDir.x < 0 && vInput < 0) || (_ladderDir.z > 0 && hInput > 0 || _ladderDir.z < 0 && hInput < 0) || !_characterController.isGrounded)
+            //{
+            //    _moveVector += Vector3.up * Mathf.Abs( Mathf.Sqrt(Mathf.Pow( vInput, 2) + Mathf.Pow(hInput, 2))) * _climbspeed;
+            //}
+            var inputVector = camforward * vInput + mainCamera.transform.right * hInput;
+            inputVector.Normalize();
+            if (inputVector.magnitude >0.01f)
             {
-                _moveVector += Vector3.up * Mathf.Abs( Mathf.Sqrt(Mathf.Pow( vInput, 2) + Mathf.Pow(hInput, 2))) * _climbspeed;
+                if (!_characterController.isGrounded)
+                {
+                    var direction = Vector3.Dot(inputVector, _ladderDir);
+                    _moveVector = Vector3.up * direction * _climbspeed;
+                    transform.rotation = Quaternion.LookRotation(_ladderDir);
+                    if (direction < 0)
+                    {
+                        Toad.GetComponent<Animation>()["climb"].time = -1;
+                    }
+                }
+                //if ((_ladderDir.x > 0 && vInput > 0 || _ladderDir.x < 0 && vInput < 0) && (_ladderDir.z > 0 && hInput > 0 || _ladderDir.z < 0 && hInput < 0))
+                //{
+                //    _moveVector = Vector3.up * Mathf.Abs(Mathf.Sqrt(Mathf.Pow(vInput, 2) + Mathf.Pow(hInput, 2))) * _climbspeed;
+                //}
+                ////climbing down the ladder
+                //else
+                //{
+                //    _moveVector = Vector3.down * Mathf.Abs(Mathf.Sqrt(Mathf.Pow(vInput, 2) - Mathf.Pow(hInput, 2))) * _climbspeed;
+                //}
             }
+            else
+            {
+                Toad.GetComponent<Animation>()["climb"].time = 0;
+            }
+           
         }
 
         if (_onslope)
@@ -114,8 +140,7 @@ public class PlayerController : MonoBehaviour
             else if (_onLadder)
             {
                 //play climb
-                Toad.GetComponent<Animation>()["climb"].time = 0;
-                //Toad.GetComponent<Animation>().Play("climb");
+                Toad.GetComponent<Animation>().Play("climb");
             }
             else
             {

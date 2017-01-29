@@ -11367,7 +11367,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011696687500, guid: 439219fc14f936749a10a14349accc51, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 2.47
+      value: 2.68
       objectReference: {fileID: 0}
     - target: {fileID: 4000011696687500, guid: 439219fc14f936749a10a14349accc51, type: 2}
       propertyPath: m_LocalPosition.y
@@ -11375,7 +11375,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011696687500, guid: 439219fc14f936749a10a14349accc51, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -8.4
+      value: -8.36
       objectReference: {fileID: 0}
     - target: {fileID: 114000012309866388, guid: 439219fc14f936749a10a14349accc51,
         type: 2}
@@ -32099,81 +32099,6 @@ Prefab:
     - target: {fileID: 224000010518333844, guid: 31ee56bdc9e846143995e351ba9ce14c,
         type: 2}
       propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000013854408172, guid: 31ee56bdc9e846143995e351ba9ce14c, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000014185323688, guid: 31ee56bdc9e846143995e351ba9ce14c,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -29.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000012878177072, guid: 31ee56bdc9e846143995e351ba9ce14c,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -89.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000014185323688, guid: 31ee56bdc9e846143995e351ba9ce14c,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 779.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000012878177072, guid: 31ee56bdc9e846143995e351ba9ce14c,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 780.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000012508613478, guid: 31ee56bdc9e846143995e351ba9ce14c,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 786.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000012618112886, guid: 31ee56bdc9e846143995e351ba9ce14c,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 786.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010272414966, guid: 31ee56bdc9e846143995e351ba9ce14c,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000010728974370, guid: 31ee56bdc9e846143995e351ba9ce14c, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013212620762, guid: 31ee56bdc9e846143995e351ba9ce14c, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -949.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000013284084756, guid: 31ee56bdc9e846143995e351ba9ce14c,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -16.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000012003808726, guid: 31ee56bdc9e846143995e351ba9ce14c, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000012383841112, guid: 31ee56bdc9e846143995e351ba9ce14c,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -120.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000010238549302, guid: 31ee56bdc9e846143995e351ba9ce14c,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 193.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000014164264828, guid: 31ee56bdc9e846143995e351ba9ce14c,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 86
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000010529467456, guid: 31ee56bdc9e846143995e351ba9ce14c, type: 2}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
