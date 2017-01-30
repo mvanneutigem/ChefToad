@@ -16,7 +16,7 @@ public class Button : MonoBehaviour {
     {
         //set first scene
         Time.timeScale = 1;
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 
     public void LevelsMenu()
