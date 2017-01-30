@@ -39,6 +39,11 @@ public class Button : MonoBehaviour {
 
     public void RestartLevel()
     {
+        if(PlayerPrefs.GetInt("ToadalLives") == 0)
+        {
+            PlayerPrefs.SetInt("ToadalLives", 10);
+            PlayerPrefs.SetInt("Score", 0);
+        }
         Time.timeScale = 1;
         int sceneIndex = PlayerPrefs.GetInt("PreviousScene");
        // Debug.Log(sceneIndex);
