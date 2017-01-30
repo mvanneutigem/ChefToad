@@ -1,25 +1,35 @@
-﻿Shader "Custom/Blep" {
+﻿Shader "Custom/BackShader" {
 	Properties {
 		_Color ("Color", Color) = (1,1,1,1)
 		_MainTex ("Albedo (RGB)", 2D) = "white" {}
 		_Glossiness ("Smoothness", Range(0,1)) = 0.5
-		_Metallic ("Metallic", Range(0,1)) = 0.0
+		_Metallic("Metallic", Range(0,1)) = 0
+		_BumpMap("Bump (RGB)", 2D) = "bump" {}
 	}
 	SubShader {
-		Tags { "RenderType"="Opaque" }
-		LOD 200
+		Tags{ "Queue" = "Overlay+1"
+		"RenderType" = "Transparent" }
 		
+		Pass
+	{
+		ZWrite Off
+		ZTest Greater
+		Lighting Off
+		Color[_MaskColor]
+	}
+		LOD 300
 		CGPROGRAM
 		// Physically based Standard lighting model, and enable shadows on all light types
 		#pragma surface surf Standard fullforwardshadows
-
 		// Use shader model 3.0 target, to get nicer looking lighting
 		#pragma target 3.0
 
 		sampler2D _MainTex;
+		sampler2D _BumpMap;
 
 		struct Input {
 			float2 uv_MainTex;
+			float2 uv_BumpMap;
 		};
 
 		half _Glossiness;
@@ -34,8 +44,13 @@
 			o.Metallic = _Metallic;
 			o.Smoothness = _Glossiness;
 			o.Alpha = c.a;
+			float3 n = UnpackNormal(tex2D(_BumpMap, IN.uv_BumpMap));
+			n.g *= -1;
+			o.Normal = n;
 		}
 		ENDCG
 	}
 	FallBack "Diffuse"
 }
+
+
