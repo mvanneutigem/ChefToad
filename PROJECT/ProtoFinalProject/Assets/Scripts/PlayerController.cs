@@ -28,6 +28,10 @@ public class PlayerController : MonoBehaviour
     private bool _stopFallMovement = false;
     public Material DirtyToadMaterial;
     public Material cleanToadMaterial;
+    public Material CustomToadMaterial;
+    public Material CustomDirtyToadMaterial;
+    private bool _customshaderOn = false;
+    private bool _dirtytoad = false;
 
     //METHODS
     void Awake()
@@ -47,8 +51,6 @@ public class PlayerController : MonoBehaviour
         //scale camera forward to only have x and z axis to prevent character from angle-ing upwards/downwards
         var camforward = Vector3.Scale(mainCamera.transform.forward, new Vector3(1, 0, 1)).normalized;
         //movement when falling/ climbing... or not...
-        //if (_characterController.isGrounded)
-        {
             //set the movevector, relative to the camera direction
             _moveVector = (vInput * camforward + hInput * mainCamera.transform.right);
 
@@ -65,7 +67,6 @@ public class PlayerController : MonoBehaviour
                     transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.time * _rotateSpeed);
                 }
             }
-        }
 
 
 
@@ -74,22 +75,12 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("ladder movement active");
             Debug.Log(vInput);
-
-            //if (_characterController.isGrounded && ( _ladderDir.x > 0 && vInput > 0 || _ladderDir.x < 0 && vInput < 0) || (_ladderDir.z > 0 && hInput > 0 || _ladderDir.z < 0 && hInput < 0) || !_characterController.isGrounded)
-            //{
-            //    _moveVector += Vector3.up * Mathf.Abs( Mathf.Sqrt(Mathf.Pow( vInput, 2) + Mathf.Pow(hInput, 2))) * _climbspeed;
-            //}
             var inputVector = camforward * vInput + mainCamera.transform.right * hInput;
             inputVector.Normalize();
             if (inputVector.magnitude >0.01f)
             {
                 if (!_characterController.isGrounded)
                 {
-                    //for walking at ladder
-                    //var direction = Vector3.Dot(inputVector, _ladderDir);
-                    //_moveVector = Vector3.up * direction * _climbspeed;
-                    //transform.rotation = Quaternion.LookRotation(_ladderDir);
-
                     if (vInput > 0)
                     {
                         _moveVector = Vector3.up * _climbspeed;
@@ -100,20 +91,8 @@ public class PlayerController : MonoBehaviour
                         Toad.GetComponent<Animation>()["climb"].time = -1;
                         transform.rotation = Quaternion.LookRotation(_ladderDir);
                     }
-                    //if (direction < 0)
-                    //{
-                    //    Toad.GetComponent<Animation>()["climb"].time = -1;
-                    //}
+
                 }
-                //if ((_ladderDir.x > 0 && vInput > 0 || _ladderDir.x < 0 && vInput < 0) && (_ladderDir.z > 0 && hInput > 0 || _ladderDir.z < 0 && hInput < 0))
-                //{
-                //    _moveVector = Vector3.up * Mathf.Abs(Mathf.Sqrt(Mathf.Pow(vInput, 2) + Mathf.Pow(hInput, 2))) * _climbspeed;
-                //}
-                ////climbing down the ladder
-                //else
-                //{
-                //    _moveVector = Vector3.down * Mathf.Abs(Mathf.Sqrt(Mathf.Pow(vInput, 2) - Mathf.Pow(hInput, 2))) * _climbspeed;
-                //}
             }
             else
             {
@@ -179,11 +158,38 @@ public class PlayerController : MonoBehaviour
 
         _onLadder = false;
         _onslope = false;
-        _prevlives = GetComponent<Death>()._lives;
-        if (_lives == 0)
+        Debug.Log( _lives);
+        if (_lives == 2 && _prevlives !=2)
         {
-            transform.GetChild(0).transform.GetChild(0).transform.GetComponent<Renderer>().material = cleanToadMaterial;
+            _dirtytoad = false;
+            if (_customshaderOn)
+            {
+                transform.GetChild(0).transform.GetChild(0).transform.GetComponent<Renderer>().material = CustomToadMaterial;
+            }
+            else
+            {
+                transform.GetChild(0).transform.GetChild(0).transform.GetComponent<Renderer>().material = cleanToadMaterial;
+            }
+
         }
+        if (_lives == 1 && _prevlives == 2)
+        {
+            _dirtytoad = true;
+            if (_customshaderOn)
+            {
+                transform.GetChild(0).transform.GetChild(0).transform.GetComponent<Renderer>().material = CustomDirtyToadMaterial;
+            }
+            else
+            {
+                transform.GetChild(0).transform.GetChild(0).transform.GetComponent<Renderer>().material = DirtyToadMaterial;
+            }
+        }
+
+        if (Input.GetButtonDown("Switch"))
+        {
+            SwitchMaterial();
+        }
+        _prevlives = GetComponent<Death>()._lives;
     }
 
     void OnTriggerStay(Collider other)
@@ -217,8 +223,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private IEnumerator playanimation()
-    {
-        transform.GetChild(0).transform.GetChild(0).transform.GetComponent<Renderer>().material = DirtyToadMaterial;
+    {   
         Toad.GetComponent<Animation>()["Fall"].time = 0;
         Toad.GetComponent<Animation>().Play("Fall");
         yield return new WaitForSeconds(0.5f);
@@ -226,5 +231,24 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         _stopFallMovement = false;
         _falling = false;
+    }
+
+    public void SwitchMaterial()
+    {
+        _customshaderOn = !_customshaderOn;
+        if (_customshaderOn)
+        {
+            if (_dirtytoad)
+                transform.GetChild(0).transform.GetChild(0).transform.GetComponent<Renderer>().material = CustomDirtyToadMaterial;
+            else
+            transform.GetChild(0).transform.GetChild(0).transform.GetComponent<Renderer>().material = CustomToadMaterial;
+        }
+        else
+        {
+            if (_dirtytoad)
+                transform.GetChild(0).transform.GetChild(0).transform.GetComponent<Renderer>().material = DirtyToadMaterial;
+            else
+                transform.GetChild(0).transform.GetChild(0).transform.GetComponent<Renderer>().material = cleanToadMaterial;
+        }
     }
 }

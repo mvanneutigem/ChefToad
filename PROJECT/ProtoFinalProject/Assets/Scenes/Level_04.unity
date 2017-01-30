@@ -9780,6 +9780,16 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010365180714, guid: 31ee56bdc9e846143995e351ba9ce14c,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1302892859}
+    - target: {fileID: 114000010272414966, guid: 31ee56bdc9e846143995e351ba9ce14c,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartLevelPauze
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31ee56bdc9e846143995e351ba9ce14c, type: 2}
   m_IsPrefabParent: 0
@@ -33294,6 +33304,16 @@ Prefab:
       propertyPath: GameController
       value: 
       objectReference: {fileID: 1175345907}
+    - target: {fileID: 114000010818530434, guid: 439219fc14f936749a10a14349accc51,
+        type: 2}
+      propertyPath: CustomToadMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 1c65bfa810446e947874a60d3c072e01, type: 2}
+    - target: {fileID: 114000010818530434, guid: 439219fc14f936749a10a14349accc51,
+        type: 2}
+      propertyPath: CustomDirtyToadMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: dc0c2adcb8aa1544fa4457c6bbe82f82, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 439219fc14f936749a10a14349accc51, type: 2}
   m_IsPrefabParent: 0
@@ -37039,6 +37059,12 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: b263dbcb51eed974592e28c53be1ac85, type: 3}
   m_PrefabInternal: {fileID: 281513717}
+--- !u!114 &1302892859 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000010818530434, guid: 439219fc14f936749a10a14349accc51,
+    type: 2}
+  m_PrefabInternal: {fileID: 1159176817}
+  m_Script: {fileID: 11500000, guid: 2bf8bb3c57529de40b265b96d641a74a, type: 3}
 --- !u!4 &1307539986 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ba8298af7c3391243b47e441a8e637ae, type: 3}

@@ -27088,6 +27088,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -9.26
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 11b5820c073d7ee4d994f808943bbaab, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a785f86a4e08e7745914d2f42f4095d4, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 11b5820c073d7ee4d994f808943bbaab, type: 3}
   m_IsPrefabParent: 0
@@ -42811,6 +42815,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010272414966, guid: 31ee56bdc9e846143995e351ba9ce14c,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartLevelPauze
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31ee56bdc9e846143995e351ba9ce14c, type: 2}
   m_IsPrefabParent: 0
@@ -53639,6 +53648,16 @@ Prefab:
       propertyPath: GameController
       value: 
       objectReference: {fileID: 530783442}
+    - target: {fileID: 114000010818530434, guid: 439219fc14f936749a10a14349accc51,
+        type: 2}
+      propertyPath: CustomToadMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 1c65bfa810446e947874a60d3c072e01, type: 2}
+    - target: {fileID: 114000010818530434, guid: 439219fc14f936749a10a14349accc51,
+        type: 2}
+      propertyPath: CustomDirtyToadMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: dc0c2adcb8aa1544fa4457c6bbe82f82, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 439219fc14f936749a10a14349accc51, type: 2}
   m_IsPrefabParent: 0
