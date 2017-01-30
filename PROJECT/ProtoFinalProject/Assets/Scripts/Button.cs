@@ -17,6 +17,8 @@ public class Button : MonoBehaviour {
         //set first scene
         Time.timeScale = 1;
         SceneManager.LoadScene(1);
+        PlayerPrefs.SetInt("ToadalLives", 10);
+       PlayerPrefs.SetInt("Score", 0);
     }
 
     public void LevelsMenu()
@@ -39,14 +41,27 @@ public class Button : MonoBehaviour {
 
     public void RestartLevel()
     {
-        if(PlayerPrefs.GetInt("ToadalLives") == 0)
+        //if (PlayerPrefs.GetInt("ToadalLives") == 0)
         {
             PlayerPrefs.SetInt("ToadalLives", 10);
             PlayerPrefs.SetInt("Score", 0);
         }
         Time.timeScale = 1;
         int sceneIndex = PlayerPrefs.GetInt("PreviousScene");
-       // Debug.Log(sceneIndex);
+        // Debug.Log(sceneIndex);
+        SceneManager.LoadScene(sceneIndex);
+    }
+
+    public void RestartLevelPauze()
+    {
+        Debug.Log("restart");
+        //if (PlayerPrefs.GetInt("ToadalLives") == 0)
+        //{
+        //    PlayerPrefs.SetInt("ToadalLives", 10);
+        //    PlayerPrefs.SetInt("Score", 0);
+        //}
+        Time.timeScale = 1;
+        int sceneIndex = PlayerPrefs.GetInt("CurrentScene");
         SceneManager.LoadScene(sceneIndex);
     }
 
